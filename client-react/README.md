@@ -17,7 +17,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ### Referenciais vídeos
+Parte 3:
 https://www.youtube.com/watch?v=_S2GKnFpdtE
+
+Parte 2:
+https://www.youtube.com/watch?v=3YrOOia3-mo
 
 
 
