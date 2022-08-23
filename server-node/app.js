@@ -34,7 +34,7 @@ app.get('/', function (req,res){
 
 //API GET SELECT
 app.get('/api/select', function (req, res) {
-    const sql_select = "SELECT * FROM table_teste";
+    const sql_select = "SELECT * FROM produto";
     db.query(
         sql_select, (err, result) => {
         // res.send('Server: Hello Server Node JS');
@@ -45,12 +45,15 @@ app.get('/api/select', function (req, res) {
 
 app.post('/api/insert', (req, res)=> {
 
-    const userName = req.body.username
-    const Cidade = req.body.cidade
-
-    const sql_insert = "INSERT INTO table_teste(user_name, cidade) VALUES (?,?)";
+    const nome_barraca = req.body.name_barraca;
+    const categ = req.body.categ;
+    const nome_produto = req.body.name_produto;
+    const price = req.body.price;
+    
+    const sql_insert = 
+        "INSERT INTO produto(fk_nome_barraca, categoria, nome_produto, preco) VALUES (?,?,?,?)";
     db.query(
-        sql_insert, [userName, Cidade], (err, result) => {
+        sql_insert, [nome_barraca, categ, nome_produto, price], (err, result) => {
         ;console.log(result);    
         
     });
