@@ -45,7 +45,7 @@ const Navbar = () => {
       </button>
    
       <button className='bg-white text-black hidden md:flex items-center py-2 rounded-full'>
-      <FaUserFriends size={20} className='mr-2' />  Registra-se
+      <FaUserFriends size={20} className='mr-2' />  Registre-se
       </button>
 
       {/* Mobile Menu */}
@@ -69,7 +69,7 @@ const Navbar = () => {
             <ul className='flex flex-col p-4 text-gray-800'>
            
                 <Link to="/" className='text-xl py-4 flex cursor-pointer'>  Home</Link>
-                <Link to="/register-user" className='text-xl py-4 flex cursor-pointer'> Registre-se</Link>
+                <Link to="/cadastro-usuario" className='text-xl py-4 flex cursor-pointer'> Registre-se</Link>
                 <Link to="/register-product" className='text-xl py-4 flex cursor-pointer'> Cad Produto</Link>
                 <Link to="/login" className='text-xl py-4 flex cursor-pointer'> Entrar</Link>
                 <Link to="/about" className='text-xl py-4 flex cursor-pointer'>About </Link> 
