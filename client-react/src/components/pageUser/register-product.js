@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 // import { Link } from "react-router-dom";
-
+import Navbar from '../navBar'
 
 
 function RegisterUser() {
@@ -48,14 +48,19 @@ function RegisterUser() {
       },
     ]);
 
+    // Clear Inputs 
+    setName_barraca("");
+    setCateg("");
+    setName_produto("");
+    setPrice("");
+
   };
 
   return (
     <>   
-
-
-              
-
+    
+    <Navbar />
+   
 
 
     <div className='max-w-[1640px] mx-auto mt-20 mb-40 p-4'>
@@ -84,7 +89,7 @@ function RegisterUser() {
           <input 
           className='bg-transparent p-2 w-full focus:outline-none' 
           type='text' 
-          name="name_barraca" 
+          value={name_barraca} 
           onChange={(e)=>{
             setName_barraca(e.target.value)
           }} />
@@ -92,8 +97,6 @@ function RegisterUser() {
       </div>   
 
     </div>
-
-
 
     {/* Fields  Products */}
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
@@ -109,13 +112,12 @@ function RegisterUser() {
             <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='text' 
-            name="name_produto" 
+            value={name_produto} 
             onChange={(e)=>{
               setName_produto(e.target.value)
             }} />
             
-        </div>   
-
+        </div>  
     </div>
 
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
@@ -131,12 +133,11 @@ function RegisterUser() {
             <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='text'
-            name="price" 
+            value={price} 
             onChange={(e)=>{
                 setPrice(e.target.value)
             }} />
-        </div>   
-
+        </div>  
     </div>
     
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
@@ -152,13 +153,12 @@ function RegisterUser() {
             <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='text'
-            name="categ" 
+            value={categ} 
             onChange={(e)=>{
                 setCateg(e.target.value)
             }} 
             />
-        </div>   
-
+        </div>  
     </div>
 
     {/* Login Register button */}
@@ -170,16 +170,13 @@ function RegisterUser() {
 
     </div>    
 
-
-
-       {/* Exibindo uma Lista  */ }
-       {
+       {/* {
           productList.map(function (k){
             return (
               <h1>Id: {k.fk_nome_barraca} | Produto: {k.nome_produto} | Categoria:{k.categoria}</h1>
             )
           })
-        }
+        } */}
 
 </>
 

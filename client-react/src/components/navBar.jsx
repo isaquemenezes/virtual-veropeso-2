@@ -18,34 +18,34 @@ const Navbar = () => {
         <AiOutlineMenu size={30} />
         </div>
 
-        <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
-          Ver o Peso <span className='font-bold'>Virtual</span>
-        </h1>
+        <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2 cursor-pointer'>
+          <Link to="/" > 
 
-        {/* <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
-          <p className='bg-black text-white rounded-full p-2'>Delivery</p>
-          <p className='p-2'>Pickup</p>
-        </div> */}
+            Ver o Peso  <span className='font-bold'> Virtual</span>
+          </Link>
+        </h1>
         
       </div>
 
-      {/* Search Input */}
+      {/* Search Product */}
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-       
-        <input
-          className='bg-transparent p-2 w-full focus:outline-none'
-          type='text'
-          placeholder='Search foods'
-        />
+  
+        <input className='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='buscar produto' />
+
       </div>
 
       {/* Login Register button */}
       <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'>
-       Entrar
+        
+        <Link to="/login"> Entrar </Link>
+
       </button>
    
-      <button className='bg-white text-black hidden md:flex items-center py-2 rounded-full'>
-      <FaUserFriends size={20} className='mr-2' />  Registre-se
+      <button className='bg-white text-black hidden md:flex items-center py-2 ease-in rounded-full'>
+      <FaUserFriends size={20} className='mr-2' />
+        
+        <Link to="/cadastro-usuario"> Registre-se </Link>
+
       </button>
 
       {/* Mobile Menu */}
@@ -66,7 +66,7 @@ const Navbar = () => {
 
         {/* nav  */}
         <nav>
-            <ul className='flex flex-col p-4 text-gray-800'>
+            <ul className='flex flex-col p-4 text-gray-800 duration-10000'>
            
                 <Link to="/" className='text-xl py-4 flex cursor-pointer'>  Home</Link>
                 <Link to="/cadastro-usuario" className='text-xl py-4 flex cursor-pointer'> Registre-se</Link>

@@ -5,13 +5,7 @@ const cors = require('cors');
 const mysql = require('mysql2');
 
 //DB CONNECTION
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  port: 3306,
-  database: "vp-virtual",
-});
+const db = mysql.createConnection({ host: "localhost", user: "root", password: "", port: 3306, database: "vp-virtual", });
 
 //INSTANTEDS
 app.use(cors());
@@ -19,9 +13,7 @@ app.use(express.json());
 app.use(body_parser.urlencoded({extended: true}));
 
 //HOME
-app.get('/', function (req,res){
-    res.send('Server: Hello Server Node JS');
-});
+app.get('/', function (req,res){ res.send('Server: Hello Server Node JS'); });
 
 
 /******** API USER **************/
@@ -56,7 +48,7 @@ app.post('/api/insert', (req, res)=> {
         "INSERT INTO produto(fk_nome_barraca, categoria, nome_produto, preco) VALUES (?,?,?,?)";
     db.query(
         sql_insert, [nome_barraca, categ, nome_produto, price], (err, result) => {
-        ;console.log(result);    
+          
         
     });
 });

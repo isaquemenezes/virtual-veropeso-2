@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 import { Link } from "react-router-dom";
 
+import Navbar from '../navBar'
+
 
 
 function RegisterUser() {
@@ -48,6 +50,7 @@ function RegisterUser() {
 
   return (
     <>   
+       <Navbar />
     
     <div className='max-w-[1640px] mx-auto mt-20 mb-40 p-4'>
         <div className='max-h-[500px] relative'>
@@ -57,6 +60,8 @@ function RegisterUser() {
                <h2 className='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
                Crie Uma Conta Grátis              
                </h2>
+                <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
+
             </div>
             
         </div>
