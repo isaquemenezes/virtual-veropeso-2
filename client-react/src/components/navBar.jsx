@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from 'react-icons/ai';
-// import {TbTruckDelivery} from 'react-icons/tb'
-import {FaUserFriends, FaWallet} from 'react-icons/fa'
-// import {MdFavorite, MdHelp} from 'react-icons/md'
-import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import {FaUserFriends } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -70,7 +68,7 @@ const Navbar = () => {
            
                 <Link to="/" className='text-xl py-4 flex cursor-pointer'>  Home</Link>
                 <Link to="/cadastro-usuario" className='text-xl py-4 flex cursor-pointer'> Registre-se</Link>
-                <Link to="/register-product" className='text-xl py-4 flex cursor-pointer'> Cad Produto</Link>
+                <Link to="/manager" className='text-xl py-4 flex cursor-pointer'>Manager</Link>
                 <Link to="/login" className='text-xl py-4 flex cursor-pointer'> Entrar</Link>
                 <Link to="/about" className='text-xl py-4 flex cursor-pointer'>About </Link> 
                 <Link to="/help" className='text-xl py-4 flex cursor-pointer'>  Ajuda</Link>

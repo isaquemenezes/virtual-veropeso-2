@@ -16,20 +16,40 @@ app.use(body_parser.urlencoded({extended: true}));
 app.get('/', function (req,res){ res.send('Server: Hello Server Node JS'); });
 
 
-/******** API USER **************/
-// Cadastro
+/******** API FEIRANTE **************/
+// Cadastro de Feirante
+app.post('/api/feirante', (req, res)=> {
+
+    const nome_ = req.body.Nome;
+    const contato_ = req.body.Contato;
+    const barraca_ = req.body.Barraca;
+    const localizacao_ = req.body.Localizacao_barraca;
+    
+    
+    const sql_insert = 
+        "INSERT INTO feirante(nome, contato, nome_barraca, localizacao_barraca) VALUES (?,?,?,?)";
+    db.query(
+        sql_insert, [nome_, contato_, barraca_, localizacao_,], (err, result) => {
+            
+      
+    });
+});
+
+/******** API USUARIO **************/
+//Cadastro de usuario
 app.post('/api/usuariocadastro', (req, res)=> {
 
     const nome_ = req.body.Nome;
     const contato_ = req.body.Contato;
     const barraca_ = req.body.Barraca;
     const localizacao_ = req.body.Localizacao_barraca;
-    const pass_ = req.body.Senha;
+    const senha_ = req.body.Senha
+    
     
     const sql_insert = 
         "INSERT INTO usuario(nome, contato, senha, nome_barraca, localizacao_barraca) VALUES (?,?,?,?,?)";
     db.query(
-        sql_insert, [nome_, contato_, pass_, barraca_, localizacao_,], (err, result) => {
+        sql_insert, [nome_, contato_, senha_, barraca_, localizacao_,], (err, result) => {
             
       
     });

@@ -6,26 +6,24 @@ import Navbar from '../navBar'
 
 
 
-function RegisterUser() {
+function RegisterFeirante() {
 
   //Config DB
   const [_name, setNome] = useState("");
   const [_contato, setContato] = useState("");
   const [_barraca, setBarraca] = useState("");
   const [_localizacao, setLocalizacao] = useState("");
-  const [_pass, setPassword] = useState("");
-
+  
   const [userList, setUserDataList] = useState([]);
 
 
   const submitSet = () => {
 
-    Axios.post("http://127.0.0.1:5000/api/usuariocadastro", {
+    Axios.post("http://127.0.0.1:5000/api/feirante", {
        Nome: _name, 
        Contato:_contato,
        Barraca:_barraca,
        Localizacao_barraca:_localizacao,
-       Senha:_pass
 
      });
 
@@ -33,10 +31,9 @@ function RegisterUser() {
       ...userList,
       {
         nome: _name, 
-        ontato:_contato,
+        contato:_contato,
         barraca:_barraca,
         localizacao_barraca:_localizacao,
-        senha:_pass
       },
     ]);
 
@@ -45,8 +42,7 @@ function RegisterUser() {
     setContato("");
     setBarraca("");
     setLocalizacao("");
-    setPassword("");
-
+    
   };
 
   return (
@@ -59,17 +55,14 @@ function RegisterUser() {
             {/* Overlay */}
             <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
                <h2 className='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
-               Crie Uma Conta Grátis              
+               Crie Uma Conta Para Um Feirante              
                </h2>
-                <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
-
+                
             </div>
             
         </div>
     </div>
 
-
-  
     {/* Fields  */}
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
@@ -83,6 +76,7 @@ function RegisterUser() {
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='text' 
+            // name="nome"
             value={_name}
             placeholder="Nome ou apelido"
             onChange={(e)=>{
@@ -162,28 +156,7 @@ function RegisterUser() {
 
     </div>
     
-    <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-      <div className='flex items-center'>
-
-        <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Senha </p>
-
-      </div>
-
-      {/*  Input */}
-      <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-          <input 
-            className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text'
-            value={_pass} 
-            onChange={(e)=>{
-              setPassword(e.target.value)
-            }} 
-          />
-      </div>   
-
     
-    </div>
 
     {/* Login Register button */}
     <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
@@ -209,4 +182,4 @@ function RegisterUser() {
   );
 }
 
-export default RegisterUser;
+export default RegisterFeirante;

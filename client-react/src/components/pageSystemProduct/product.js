@@ -40,7 +40,6 @@ function RegisterUser() {
       },
     ]);
 
-    //clear imputs
     setNome("");
     setContato("");
     setBarraca("");
@@ -59,14 +58,21 @@ function RegisterUser() {
             {/* Overlay */}
             <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
                <h2 className='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
-               Crie Uma Conta Grátis              
+                Usuário - Manager              
                </h2>
-                <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
+                <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>Gerencie os Produtos</p>
 
             </div>
             
         </div>
     </div>
+
+
+  
+
+      
+
+     
 
 
   
@@ -83,6 +89,7 @@ function RegisterUser() {
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='text' 
+            // name="nome"
             value={_name}
             placeholder="Nome ou apelido"
             onChange={(e)=>{
@@ -182,7 +189,7 @@ function RegisterUser() {
           />
       </div>   
 
-    
+     
     </div>
 
     {/* Login Register button */}
