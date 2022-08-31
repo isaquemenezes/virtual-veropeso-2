@@ -1,0 +1,42 @@
+{{!-- header  --}}
+<header>
+    <nav>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./inserir-produto">Inserir produto</a></li>
+            <li><a href="./select">Select</a></li>
+            <li><a href="./register">Registra-se</a></li>
+            <li><a href="./login">Entrar</a></li>
+        </ul>
+    </nav>
+</header>
+
+{{!-- formulário produtos  --}}
+<div class="__form">
+    <h1>Registre-se Para Cadastrar sua barraca e  obter mais vantagens</h1>
+    
+    <form action="/controllerRegister" method="post">
+        
+        <input type="text" name="nome" id="nome" placeholder="Nome:"><br>
+        <input type="text" name="fone" id="fone" placeholder="Contato 91 9 8352-5887"><br>
+        <input type="email" name="email" id="email" placeholder="Seu Email:"><br>
+
+        <input type="text" name="nome_barraca" placeholder="Nome da Barraca:"><br>
+        <input type="text" name="localizacao_barraca" placeholder="Localização da Sua Barraca: Box 1"><br>
+
+        <input type="password" name="password" id="password" placeholder="Password:"><br>
+
+        <input type="hidden" name="user" id="user" value="user" ><br>
+        <input type="hidden" name="dateCreate" id="dateCreate" value="2022/08/08 18:58:47" ><br>
+
+        <input type="submit" name="btnSubmit" id="btnSubmit" Value="Gravar"><br>
+    </form>
+
+    <div>
+        <h2>Registre-se Com sua Rede Favorita</h2>
+
+        <a href="Facebookf">Facebook</a> <br>
+        <a href="google">Google</a> <br>
+        <a href="instagram">Instagram</a> <br>
+    </div>
+</div>

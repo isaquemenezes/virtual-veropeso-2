@@ -1,0 +1,25 @@
+<div class="__form">
+    <h1>Atualize Seu Produto</h1>
+    <form action="/controllerEdit" method="post">
+
+       
+         <input type="text" name=" fk_nome_barraca" id=" fk_nome_barraca" value="{{ fk_nome_barraca }}" placeholder=" fk_nome_barraca:" ><br>
+        
+        <input type="text" name="id" id="id" placeholder="Id:" value="{{ id }}"><br>
+        <input type="text" name="nome" id="nome" placeholder="Nome:" value="{{ nome }}"><br>
+
+         <label for="categoria">Escolha a Categoria</label>
+        <select name="category" id="categoria">
+            <option selected="" value="{{ categoria }}">{{ categoria }}</option>
+
+            <option value="fruta">Frutas</option>
+            <option value="verdura">Verduras</option>
+            <option value="peixe">Peixes</option>
+            <option value="comida tipica">Comida Típica</option>
+            <option value="artesanato">Artesanato</option>
+            <option value="outro">Outros</option>
+        </select>
+          <input type="text" name="preco" id="preco" value="{{ preco }}" ><br>
+        <input type="submit" name="btnSubmit" id="btnSubmit" Value="Atualizar"><br>
+    </form>
+</div>

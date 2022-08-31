@@ -3,18 +3,45 @@ const body_parser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const mysql = require('mysql2');
+const urlEncodedParser = body_parser.urlencoded({extended: false});
+
+const { engine } = require("express-handlebars");
+
+
+
 
 //DB CONNECTION
 const db = mysql.createConnection({ host: "localhost", user: "root", password: "", port: 3306, database: "vp-virtual", });
+const sql = db;
 
 //INSTANTEDS
 app.use(cors());
 app.use(express.json());
 app.use(body_parser.urlencoded({extended: true}));
+//Link de arquivos externos
+app.use("/css", express.static("css"));
+app.use("/js", express.static("js"));
+app.use("/images", express.static("images"));
+
+// Definir o motor de visualização para usar, neste caso
+app.engine(
+    "hbs", engine({
+      layoutsDir: __dirname + "/views/layouts",
+      extname: "hbs",
+    })
+  );
+  app.set("view engine", "hbs");
 
 //HOME
-app.get('/', function (req,res){ res.send('Server: Hello Server Node JS'); });
-
+//app.get('/', function (req,res){ res.send('Server: Hello Server Node JS'); });
+//Routes Home
+app.get("/", function (req, res) {
+    sql.query("select * from produto order by id asc",
+              function (err, results, filelds) {
+                res.render("index", { data: results });
+              }
+        );
+  });
 
 /******** API FEIRANTE **************/
 // Cadastro de Feirante
@@ -56,6 +83,15 @@ app.post('/api/usuariocadastro', (req, res)=> {
 });
 
 /******** API PRODUCT **************/
+//SELCT
+app.get('/api/select', function (req, res) {
+    const sql_select = "SELECT * FROM produto";
+    db.query(
+        sql_select, (err, result) => {
+        res.send(result);  
+    });
+});
+
 //INSERT 
 app.post('/api/insert', (req, res)=> {
 
@@ -73,14 +109,76 @@ app.post('/api/insert', (req, res)=> {
     });
 });
 
-//SELCT
-app.get('/api/select', function (req, res) {
-    const sql_select = "SELECT * FROM produto";
+//Update
+/*app.get('/api/select/:id_product', function (req, res) {
+    const id = req.params.id_product;
+    const sql_select = "SELECT * FROM produto WHERE id=?";
     db.query(
-        sql_select, (err, result) => {
+        sql_select, id, (err, result) => {
         res.send(result);  
     });
 });
+app.get('/api/update/:id', urlEncodedParser, function (req, res){
+    const sql_select = "SELECT * FROM produto WHERE id=?"
+                            ;
+    db.query(
+        sql_select, [req.params.id], (err, result) => {
+        res.send(result);  
+    });
+
+});*/
+
+
+/******** API PRODUCT SIDE BACK **************/
+//Rota Update Para Produtos Via Server
+app.get("/edit/:id", urlEncodedParser, function (req, res) {
+    sql.query("select * from produto where id=?",[req.params.id],
+                function (err, results, filelds) {
+                  res.render("edit", {
+                    id: req.params.id,
+                    fk_nome_barraca: results[0].fk_nome_barraca,
+                    categoria: results[0].categoria,
+                    nome: results[0].nome_produto,
+                    preco: results[0].preco,
+                  });
+                }
+              );
+});
+  
+  
+  app.post("/controllerEdit", urlEncodedParser, function (req, res) {
+    sql.query("update produto set fk_nome_barraca=?, categoria=?, nome_produto=?, preco=? where id=?", 
+                [
+                  req.body.fk_nome_barraca,
+                  req.body.category,
+                  req.body.nome,
+                  req.body.preco,
+                  req.body.id,
+                ]);
+                res.render("controllerEdit");
+  });
+
+
+  //select product
+  //Rota Select Um produto
+app.get("/select/:id?", function (req, res) {
+  
+    // Casso tenha o id passado
+    if (req.params.id) 
+    {
+      sql.query("select * from produto where id=?",[req.params.id],
+                function (err, results, filelds) {
+                  res.render("select", { data: results });
+                }
+              );
+    } else {
+      sql.query("select * from produto order by id asc",
+                function (err, results, filelds) {
+                  res.render("select", { data: results });
+                }
+              );
+    }
+  });
 
 
 module.exports = app;

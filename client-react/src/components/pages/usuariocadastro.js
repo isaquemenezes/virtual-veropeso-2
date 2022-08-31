@@ -33,7 +33,7 @@ function RegisterUser() {
       ...userList,
       {
         nome: _name, 
-        ontato:_contato,
+        contato:_contato,
         barraca:_barraca,
         localizacao_barraca:_localizacao,
         senha:_pass
