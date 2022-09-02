@@ -16,8 +16,8 @@
     <h1>Cadastre Um Novo Produto</h1>
     <form action="/controllerForm" method="post">
         <input type="text" name="fk_nome_barraca" id="fk_nome_barraca" placeholder="Nome da Barraca FK:"><br>
-        
-        <label for="categoria">Escolha a Categoria</label>
+        <br>
+        {{!-- <label for="categoria">Escolha a Categoria</label> --}}
         <select name="category" id="categoria">
             <option selected="">Categoria</option>
 
@@ -27,10 +27,10 @@
             <option value="comida tipica">Comida Típica</option>
             <option value="artesanato">Artesanato</option>
             <option value="outro">Outros</option>
-        </select>
+        </select> <br><br>
 
-        <input type="text" name="name" id="name" placeholder="Nome:"><br>
-        <input type="text" name="preco" id="preco" placeholder="Preço:"><br>
+        <input type="text" name="name" id="name" placeholder="Nome:"><br><br>
+        <input type="text" name="preco" id="preco" placeholder="Preço:"><br><br>
         <input type="submit" name="btnSubmit" id="btnSubmit" Value="Gravar"><br>
     </form>
 </div>

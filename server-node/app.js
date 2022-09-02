@@ -68,22 +68,19 @@ app.post('/api/usuariocadastro', (req, res)=> {
 
     const nome_ = req.body.Nome;
     const contato_ = req.body.Contato;
-    const barraca_ = req.body.Barraca;
-    const localizacao_ = req.body.Localizacao_barraca;
     const senha_ = req.body.Senha
     
     
     const sql_insert = 
-        "INSERT INTO usuario(nome, contato, senha, nome_barraca, localizacao_barraca) VALUES (?,?,?,?,?)";
+        "INSERT INTO usuario(nome, contato, senha) VALUES (?,?,?)";
     db.query(
-        sql_insert, [nome_, contato_, senha_, barraca_, localizacao_,], (err, result) => {
+        sql_insert, [nome_, contato_, senha_], (err, result) => {
             
       
     });
 });
 
 /******** API PRODUCT **************/
-//SELCT
 app.get('/api/select', function (req, res) {
     const sql_select = "SELECT * FROM produto";
     db.query(
@@ -92,7 +89,6 @@ app.get('/api/select', function (req, res) {
     });
 });
 
-//INSERT 
 app.post('/api/insert', (req, res)=> {
 
     const nome_barraca = req.body.name_barraca;
@@ -129,8 +125,27 @@ app.get('/api/update/:id', urlEncodedParser, function (req, res){
 });*/
 
 
-/******** API PRODUCT SIDE BACK **************/
-//Rota Update Para Produtos Via Server
+/******** PRODUCT SIDE BACK **************/
+app.get("/inserir-produto", function (req, res) {
+  res.render("inserir-produto");
+});
+
+app.post("/controllerForm", urlEncodedParser, function (req, res) {
+  sql.query("INSERT INTO produto values (?,?,?,?,?)", 
+              [
+                req.body.id,
+                req.body.fk_nome_barraca,
+                req.body.category,
+                req.body.name,
+                req.body.preco,
+              ]);
+            res.render("controllerForm", {
+              categoria: req.body.category,
+              nome: req.body.name,
+              preco: req.body.preco,
+            });
+});
+
 app.get("/edit/:id", urlEncodedParser, function (req, res) {
     sql.query("select * from produto where id=?",[req.params.id],
                 function (err, results, filelds) {
@@ -146,24 +161,22 @@ app.get("/edit/:id", urlEncodedParser, function (req, res) {
 });
   
   
-  app.post("/controllerEdit", urlEncodedParser, function (req, res) {
-    sql.query("update produto set fk_nome_barraca=?, categoria=?, nome_produto=?, preco=? where id=?", 
-                [
-                  req.body.fk_nome_barraca,
-                  req.body.category,
-                  req.body.nome,
-                  req.body.preco,
-                  req.body.id,
-                ]);
-                res.render("controllerEdit");
-  });
+app.post("/controllerEdit", urlEncodedParser, function (req, res) {
+  sql.query("update produto set fk_nome_barraca=?, categoria=?, nome_produto=?, preco=? where id=?", 
+              [
+                 req.body.fk_nome_barraca,
+                 req.body.category,
+                 req.body.nome,
+                 req.body.preco,
+                 req.body.id,
+               ]);
+              res.render("controllerEdit");
+});
 
 
-  //select product
-  //Rota Select Um produto
 app.get("/select/:id?", function (req, res) {
   
-    // Casso tenha o id passado
+    
     if (req.params.id) 
     {
       sql.query("select * from produto where id=?",[req.params.id],
@@ -178,7 +191,12 @@ app.get("/select/:id?", function (req, res) {
                 }
               );
     }
-  });
+});
+
+app.get("/del/:id", function (req, res) {
+  sql.query("delete from produto where id=?", [req.params.id]);
+  res.render("controllerDelete");
+});
 
 
 module.exports = app;

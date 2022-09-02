@@ -1,14 +1,16 @@
 <div class="__form">
-    <h1>Atualize Seu Produto</h1>
+    <h1>Manager: Atualizar Produto</h1>
     <form action="/controllerEdit" method="post">
 
-       
-         <input type="text" name=" fk_nome_barraca" id=" fk_nome_barraca" value="{{ fk_nome_barraca }}" placeholder=" fk_nome_barraca:" ><br>
+        <label for="categoria">Nome da Barraca</label><br>
+        <input type="text" name=" fk_nome_barraca" id=" fk_nome_barraca" value="{{ fk_nome_barraca }}" placeholder=" fk_nome_barraca:" ><br><br>
         
-        <input type="text" name="id" id="id" placeholder="Id:" value="{{ id }}"><br>
-        <input type="text" name="nome" id="nome" placeholder="Nome:" value="{{ nome }}"><br>
+        <input type="hidden" name="id" id="id" placeholder="Id:" value="{{ id }}">
 
-         <label for="categoria">Escolha a Categoria</label>
+         <label for="categoria">Nome do Produto</label><br>
+        <input type="text" name="nome" id="nome" placeholder="Nome:" value="{{ nome }}"><br><br>
+
+        <label for="categoria">Escolha a Categoria</label><br>
         <select name="category" id="categoria">
             <option selected="" value="{{ categoria }}">{{ categoria }}</option>
 
@@ -18,8 +20,10 @@
             <option value="comida tipica">Comida Típica</option>
             <option value="artesanato">Artesanato</option>
             <option value="outro">Outros</option>
-        </select>
-          <input type="text" name="preco" id="preco" value="{{ preco }}" ><br>
-        <input type="submit" name="btnSubmit" id="btnSubmit" Value="Atualizar"><br>
+        </select><br><br>
+
+        <label for="categoria">Preço</label><br>
+        <input type="text" name="preco" id="preco" value="{{ preco }}" ><br><br>
+        <input type="submit" name="btnSubmit" id="btnSubmit" Value="Atualizar"><br><br>
     </form>
 </div>

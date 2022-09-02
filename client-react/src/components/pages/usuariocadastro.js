@@ -4,15 +4,11 @@ import { Link } from "react-router-dom";
 
 import Navbar from '../navBar'
 
-
-
 function RegisterUser() {
 
   //Config DB
   const [_name, setNome] = useState("");
   const [_contato, setContato] = useState("");
-  const [_barraca, setBarraca] = useState("");
-  const [_localizacao, setLocalizacao] = useState("");
   const [_pass, setPassword] = useState("");
 
   const [userList, setUserDataList] = useState([]);
@@ -23,8 +19,6 @@ function RegisterUser() {
     Axios.post("http://127.0.0.1:5000/api/usuariocadastro", {
        Nome: _name, 
        Contato:_contato,
-       Barraca:_barraca,
-       Localizacao_barraca:_localizacao,
        Senha:_pass
 
      });
@@ -34,8 +28,6 @@ function RegisterUser() {
       {
         nome: _name, 
         contato:_contato,
-        barraca:_barraca,
-        localizacao_barraca:_localizacao,
         senha:_pass
       },
     ]);
@@ -43,8 +35,6 @@ function RegisterUser() {
     //clear imputs
     setNome("");
     setContato("");
-    setBarraca("");
-    setLocalizacao("");
     setPassword("");
 
   };
@@ -73,24 +63,12 @@ function RegisterUser() {
     {/* Fields  */}
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
-      {/* Nome */}
       <div className='flex items-center'>
           <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome </p>
       </div>
-
-      {/*  Input */}
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-          <input 
-            className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text' 
-            value={_name}
-            placeholder="Nome ou apelido"
-            onChange={(e)=>{
-              setNome(e.target.value)
-            }} 
-          />
-      </div>   
-
+          <input className='bg-transparent p-2 w-full focus:outline-none' type='text' value={_name} placeholder="Nome" onChange={(e)=>{ setNome(e.target.value) }} />
+      </div> 
     </div>
 
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
@@ -101,7 +79,7 @@ function RegisterUser() {
 
       </div>
 
-      {/*  Input */}
+      
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
@@ -116,52 +94,7 @@ function RegisterUser() {
 
     </div>
 
-    <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-      <div className='flex items-center'>
-
-        <p className='text-2xl sm:text-2xl lg:text-2xl px-2'> Barraca </p>
-
-      </div>
-
-      {/*  Input */}
-      <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-          <input 
-            className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text'
-            value={_barraca} 
-            placeholder="Nome da Sua Barraca"
-            onChange={(e)=>{
-              setBarraca(e.target.value)
-            }} 
-          />
-      </div>   
-
-    </div>
-
-    <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-      <div className='flex items-center'>
-
-        <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Localização da Barraca  </p>
-
-      </div>
-
-      {/*  Input */}
-      <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-          <input 
-            className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text'
-            value={_localizacao} 
-            placeholder="Quadra 2"
-            onChange={(e)=>{
-              setLocalizacao(e.target.value)
-            }} 
-          />
-      </div>   
-
-    </div>
-    
+  
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
       <div className='flex items-center'>
@@ -174,7 +107,7 @@ function RegisterUser() {
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text'
+            type='password'
             value={_pass} 
             onChange={(e)=>{
               setPassword(e.target.value)
@@ -194,13 +127,38 @@ function RegisterUser() {
 
       <button className='bg-white text-black md:flex items-center py-2 rounded-full ml-10'> 
           <Link to="/login"> Entrar</Link>
+      </button>  
+
+      
+
+    </div>    
+
+    {/* Login Register Social  */}
+    <div className='max-w-[1640px] mx-auto mt-20 mb-5 p-4'>
+        <div className='max-h-[500px] relative'>
+
+            {/* Overlay */}
+            <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
+            
+              <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>Registre-se Com sua Rede Favorita</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+    
+      <button onClick={submitSet} className='bg-white text-blue-500 md:flex items-center py-2 rounded-full'>
+        Facebook
+      </button>
+
+      <button className='bg-white text-blue-400 md:flex items-center py-2 rounded-full ml-10'> 
+          <Link to="/login"> Google</Link>
       </button>    
 
     </div>    
 
-
-
-    
 
 </>
 
