@@ -11,6 +11,9 @@
 - Não esqueça do banco de dados:
 Estamos usando o mariadb e phpmyadmin
 
+- Execute o project 
+`npm start`
+
 - Repita os passos pra rodar o server-node
 
 ## branch Front-end client-react
@@ -24,6 +27,12 @@ Estamos usando o mariadb e phpmyadmin
 - [x] Read 
 - [x] Update
 - [x] Delete
+
+### CRUD Usuário
+- [x] Create 
+- [ ] Read 
+- [] Update
+- [] Delete
 
 
 
