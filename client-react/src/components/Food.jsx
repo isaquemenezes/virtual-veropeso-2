@@ -19,18 +19,7 @@ const Food = () => {
 
   };
 
-  // Filtrar por id
-  const filterTypeId = (id) => {
-
-    setFoods(
-
-      data.filter((item) => {
-        return item.id === id;
-      })
-
-    );
-
-  };
+  // Filtrar por id  const filterTypeId = (id) => { setFoods( data.filter((item) => { return item.id === id; }) ); };
   
 
   return (
