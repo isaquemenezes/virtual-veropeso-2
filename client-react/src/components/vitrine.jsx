@@ -10,8 +10,7 @@ const VitrineProdutos = () => {
               setProductDataList(response.data);
             }
         );
-      }, 
-  []);
+  },[]);
 
 
   return (

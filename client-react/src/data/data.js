@@ -1,181 +1,185 @@
+
 export const data = [
   {
     id: 1,
-    name: 'Double Cheeseburger',
-    category: 'burger',
-    image:
-      'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60',
-    price: '$$$$',
+    name: 'Pato no Tucupi',
+    feirante: 'Dona Joana',
+    category: 'carne',
+    image:'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-13-pato-no-tucupi.jpg',
+    price: '25,00',
   },
   {
     id: 2,
-    name: 'Bacon Cheeseburger',
-    category: 'burger',
+    name: 'TACACÁ',
+    feirante: 'Dona Jurema',
+    category: 'carne',
     image:
-      'https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60',
-    price: '$',
+        'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-2-tacaca.jpg',
+    price: '25,00',
   },
   {
     id: 3,
-    name: 'Mushroom Burger',
-    category: 'burger',
+    name: 'VATAPÁ DO PARÁ',
+    feirante: 'Seu Armando',
+    category: 'carne',
     image:
-      'https://images.unsplash.com/photo-1608767221051-2b9d18f35a2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60',
-    price: '$$',
+        'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-3-vatapa.jpg',
+    price: '25,00',
   },
+  
   {
     id: 4,
-    name: 'Loaded Burger',
-    category: 'burger',
+    name: 'FILHOTE',
+    feirante: 'Seu Nerito',
+    category: 'carne',
     image:
-      'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60',
-    price: '$$$',
+        'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-11-filhot.jpg',
+    price: '25,00',
   },
   {
     id: 5,
-    name: 'Feta & Spinnach',
-    category: 'pizza',
+    name: 'CARANGUEJO',
+    feirante: 'Seu Santos',
+    category: 'carne',
     image:
-      'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-    price: '$$',
+        'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-12-caranguejo.jpg',
+    price: '25,00',
   },
+
   {
     id: 6,
-    name: 'Supreme Pizza',
+    name: 'Bolo de macaxeira',
+    feirante: 'Seu Pedro',
+    category: 'massa',
+    image:
+        'https://blog.viajarfazbem.com/wp-content/uploads/2020/04/comidastipicasdobelemdoparabolodemacaxeira-768x512.jpg',
+    price: '25,00',
+  },
+
+  {
+    id: 7,
+    name: 'Caruru',
+    feirante: 'Seu Jose',
+    category: 'massa',
+    image:
+        'https://veropesodacozinhaparaense.com.br/wp-content/uploads/2021/11/caruru-cozinha-paraense.webp',
+    price: '25,00',
+  },
+  
+  {
+    id: 8,
+    name: 'Açai',
+    feirante: 'Seu Paulo',
+    category: 'massa',
+    image:
+        'https://veropesodacozinhaparaense.com.br/wp-content/uploads/2021/11/acai-cozinha-paraense.webp',
+    price: '25,00',
+  },
+  
+  
+  {
+    id: 11,
+    name: 'Suprema Pizza',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$',
   },
   {
-    id: 7,
-    name: 'Meat Lovers',
+    id: 12,
+    name: 'Loucos Por Pizza',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
     price: '$$$$',
   },
   {
-    id: 8,
-    name: 'Cheese Pizza',
+    id: 13,
+    name: 'Calabresa Pizza',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1548369937-47519962c11a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZXNlJTIwcGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$',
   },
   {
-    id: 9,
-    name: 'Kale Salad',
-    category: 'salad',
+    id: 14,
+    name: 'Salada Nutritiva',
+    category: 'salada',
     image:
       'https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$',
   },
   {
-    id: 10,
-    name: 'Ceasar Salad',
-    category: 'salad',
+    id: 15,
+    name: 'Salada Ovo',
+    category: 'salada',
     image:
       'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$',
   },
   {
-    id: 11,
-    name: 'Loaded Salad',
-    category: 'salad',
+    id: 16,
+    name: 'Salada Fresca',
+    category: 'salada',
     image:
       'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$$',
   },
   {
-    id: 12,
-    name: 'Fruit Salad',
-    category: 'salad',
+    id: 17,
+    name: 'Fruta de Salada',
+    category: 'salada',
     image:
       'https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
     price: '$',
   },
+ 
   {
-    id: 13,
-    name: 'Wings',
-    category: 'chicken',
-    image:
-      'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-    price: '$$',
-  },
-  {
-    id: 14,
-    name: 'Baked Chicken',
-    category: 'chicken',
+    id: 18,
+    name: 'Pato grelhado',
+    feirante: 'Bora Bill',
+    category: 'carne',
     image:
       'https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$$',
   },
   {
-    id: 15,
-    name: 'Chicken Tenders',
-    category: 'chicken',
+    id: 19,
+    name: 'manicoba',
+    feirante: 'Falco',
+    category: 'carne',
     image:
-      'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    price: '$',
+      'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-4-manicoba.jpg',
+    price: '$$$$',
   },
-  {
-    id: 16,
-    name: 'Chicken Kabob',
-    category: 'chicken',
-    image:
-      'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-    price: '$$$',
-  },
+
+ 
+  
 ];
 
 export const categories = [
   {
-    id: 1,
-    name: 'Fast Food',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/FastFood_BrowseHome@3x.png',
-  },
-  {
-    id: 2,
-    name: 'Pizza',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Pizza_BrowseHome@3x.png',
-  },
-  {
-    id: 3,
-    name: 'Wings',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Wings_BrowseHome@3x.png',
-  },
-  {
     id: 4,
-    name: 'Indian',
+    name: 'Monetize suas Receitas ',
+    description: 'Ganhe dinheiro vendendo deliciosas receitas da culinária paraense',
+
     image:
       'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Indian_BrowseHome@3x.png',
   },
   {
-    id: 5,
-    name: 'Latest Deals',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Deals_BrowseHome@3x.png',
-  },
-  {
-    id: 6,
-    name: 'Restaurant Rewards',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/RestoRewards_BrowseHome@3x.png',
-  },
-  {
-    id: 7,
-    name: 'Best Overall',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/TopEats_Browse%20Home@3x.png',
-  },
-  {
     id: 8,
-    name: 'Shipped Free',
+    name: 'Chef Privado ',
+    description: 'Transforme sua casa em um restaurante com um Chef Especialista',
     image:
       'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Placeholder_Plates@3x.png',
+  },
+
+  {
+    id: 4,
+    name: 'Lista dos melhores restaurantes ',
+    description: 'Uma lista dos melhores restaurantes da nossa culinária paraense',
+
+    image:
+    'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/RestoRewards_BrowseHome@3x.png',
   },
 ];

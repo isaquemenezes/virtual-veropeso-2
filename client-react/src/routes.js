@@ -6,6 +6,7 @@ import Help from "./components/pages/help.page";
 import Login from "./components/pages/login.page";
 import RegisterUser from './components/pages/usuariocadastro.page';
 import Feirante from './components/pages/feirante.page';
+import FoodSingle from './components/pages/detalhe-comida.page';
 
 import Manager from './components/pageUser/manager';
 import { BrowserRouter, Routes, Route,  } from "react-router-dom";
@@ -26,6 +27,10 @@ function routesClient () {
                 <Route path='/about' element={<About />} />
                 <Route path='/help' element={<Help />} />
                 <Route path='/manager' element={<Manager />} />
+
+                <Route path='/food_single/:food_id' element={<FoodSingle />} />
+
+
             </Routes>
         </ BrowserRouter>
     )

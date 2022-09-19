@@ -3,7 +3,7 @@ import Banner from "../images/banner.jpeg"
 
 const TextBanner = () => {
   return ( 
-    <div className='max-w-[1640px] mx-auto p-4'>
+    <div className='max-w-[1540px] mx-auto p-4'>
         <div className='max-h-[500px] relative'>
 
          
