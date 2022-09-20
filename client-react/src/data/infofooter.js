@@ -25,11 +25,11 @@ export const footer = [
       id: 3,
       name: 'Conecte-se Conosco',
       social_f: 'Facebook',
-      social_l: 'LinkedIn',
+      social_w: 'WhatsApp',
       social_i: 'Instagram',
 
       icon_f:'https://img.icons8.com/ios-filled/344/facebook--v1.png',
-      icon_l:'https://img.icons8.com/color/344/linkedin.png',
+      icon_w:'https://img.icons8.com/color/344/whatsapp--v2.png',
       icon_i:'https://img.icons8.com/3d-fluency/344/instagram-new.png',
     
   

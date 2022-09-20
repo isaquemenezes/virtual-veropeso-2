@@ -41,7 +41,7 @@ const Footer = () => {
                         
                             <Link to={'/facebook.com.br'}  className='cursor-pointer '> 
                             
-                                <h3><img src={item.icon_l} alt='' className='w-5' />{item.social_l} </h3>                        
+                                <h3><img src={item.icon_w} alt='' className='w-5' />{item.social_w} </h3>                        
                             </ Link>                             
                         </div>
 
