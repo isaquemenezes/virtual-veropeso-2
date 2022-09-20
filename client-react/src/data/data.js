@@ -157,29 +157,3 @@ export const data = [
   
 ];
 
-export const categories = [
-  {
-    id: 4,
-    name: 'Monetize suas Receitas ',
-    description: 'Ganhe dinheiro vendendo deliciosas receitas da culinária paraense',
-
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Indian_BrowseHome@3x.png',
-  },
-  {
-    id: 8,
-    name: 'Chef Privado ',
-    description: 'Transforme sua casa em um restaurante com um Chef Especialista',
-    image:
-      'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Placeholder_Plates@3x.png',
-  },
-
-  {
-    id: 4,
-    name: 'Lista dos melhores restaurantes ',
-    description: 'Uma lista dos melhores restaurantes da nossa culinária paraense',
-
-    image:
-    'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/RestoRewards_BrowseHome@3x.png',
-  },
-];

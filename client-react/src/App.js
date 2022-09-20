@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Navbar from './components/navBar'
 import TextBanner from './components/text-banner';
 import Features from './components/Feature';
-// import Produtos from './components/vitrine';
+import Footer from './components/Footer';
 import Food from './components/Food';
-// import Category from './components/Category'
 
 
 class App extends Component {
@@ -12,16 +11,15 @@ class App extends Component {
         return (
             
             <div>
+                
                 <Navbar />
                 <TextBanner />
-                {/* <Produtos /> */}
                 <Features />
-                <Food />
-                {/* <Category /> */}
-
+                <Food />              
+                <Footer />
             </div>
-            );
-        }
+        );
+    }
 }
   
   export default App;
