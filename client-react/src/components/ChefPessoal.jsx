@@ -31,10 +31,10 @@ const ChiefPessoal = () => {
               />
               <br />  
               <p>
-                O seu Chef Pessoal chegará com todos os ingredientes <br /> necessários para preparar a sua tão sonhada refeição.<br />
+                O seu Chef Pessoal chegará com todos os ingredientes <br /> <br />necessários para preparar a sua tão sonhada refeição.<br /><br />
                
 
-                Sente-se e desfrute do seu próprio show culinário!<br /> Assista e aprenda novas receitas enquanto<br /> seu chef prepara uma boa refeição na mesa do seu chef interno
+                Sente-se e desfrute do seu próprio show culinário!<br /> Assista e aprenda novas receitas enquanto<br /><br /> seu chef prepara uma boa refeição na mesa do seu chef interno
               </p>
             </div>
 
@@ -55,20 +55,21 @@ const ChiefPessoal = () => {
             </div>
 
             <div  className='bg-gray-100 rounded-lg p-4 items-center' >
-              <h2 className='font-bold sm:text-xl text-center'>O final</h2><br />
+              <h2 className='font-bold sm:text-xl text-center'>O Chef</h2><br />
               <img className='rounded-lg w-25'
                 src="https://d1hdnpfpyy58x9.cloudfront.net/context/frontend/images/homepage/common/sections/your-private-chef-will-leave-your-kitchen-spotless.jpg,w_540,h_380,c_1,q_90,fd_0,e_.webp" 
                 alt=""  
               />
               <br />
               <p>
-              No final da noite, tudo o que restará para você fazer é relaxar e aproveitar sua companhia.
+              O chef Pessoal é uma pessoa altamente capacitada em determinado prato.<br /><br />
+              Ele cuida exclusivamente do preparativo do prato escolhido pelo cliente.<br />
 
 
               </p><br />
               
               <p>
-              Queremos dizer: Um prato delicioso e com você apreciando tudo, para a despedida.
+              Sua função será fazer da sua experiência com aquele prato se elevar para outro nível.
               </p>
             </div>
 
