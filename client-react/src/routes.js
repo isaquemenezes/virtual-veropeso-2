@@ -4,6 +4,7 @@ import App from  "./App"
 import About from './components/pages/about.page';
 import Help from "./components/pages/help.page";
 import Login from "./components/pages/login.page";
+import AboutChiefPessoal from "./components/pages/about-chef-pessoal.page";
 import RegisterUser from './components/pages/usuariocadastro.page';
 import Feirante from './components/pages/feirante.page';
 import FoodSingle from './components/pages/detalhe-comida.page';
@@ -24,7 +25,7 @@ function routesClient () {
                 <Route path='/feirante' element={<Feirante />} />
                 
                 <Route path='/login' element={<Login />} />
-                <Route path='/about' element={<About />} />
+                <Route path='/chef-pessoal' element={<AboutChiefPessoal />} />
                 <Route path='/help' element={<Help />} />
                 <Route path='/manager' element={<Manager />} />
 

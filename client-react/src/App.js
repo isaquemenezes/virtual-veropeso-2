@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Navbar from './components/navBar'
 import TextBanner from './components/text-banner';
 import Features from './components/Feature';
-import Footer from './components/Footer';
 import Food from './components/Food';
-
+import Bids from './components/Bids';
+import Footer from './components/Footer';
 
 class App extends Component {
     render() {
@@ -15,7 +15,8 @@ class App extends Component {
                 <Navbar />
                 <TextBanner />
                 <Features />
-                <Food />              
+                <Food />  
+                <Bids />            
                 <Footer />
             </div>
         );

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Navbar from '../navBar'
 import TextBanner from '../text-banner';
 import Features from '../Feature';
-// import Produtos from '../vitrine';
 import FoodSingle from '../FoodSingle';
-// import Category from '../Category'
+import Footer from '../Footer';
 
 
 class perfilFood extends Component {
@@ -17,6 +16,7 @@ class perfilFood extends Component {
                 
                 <Features />
                 <FoodSingle />
+                <Footer />
                
 
             </div>

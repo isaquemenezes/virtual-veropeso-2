@@ -18,7 +18,6 @@ const Navbar = () => {
 
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2 cursor-pointer'>
           <Link to="/" > 
-
             Ver o Peso  <span className='font-bold'> Virtual</span>
           </Link>
         </h1>
@@ -28,7 +27,7 @@ const Navbar = () => {
       {/* Search Product */}
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
   
-        <input className='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='buscar produto' />
+        <input className='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='buscar' />
 
       </div>
 
@@ -70,7 +69,7 @@ const Navbar = () => {
                 <Link to="/cadastro-usuario" className='text-xl py-4 flex cursor-pointer'> Registre-se</Link>
                 <Link to="/manager" className='text-xl py-4 flex cursor-pointer'>Manager</Link>
                 <Link to="/login" className='text-xl py-4 flex cursor-pointer'> Entrar</Link>
-                <Link to="/about" className='text-xl py-4 flex cursor-pointer'>About </Link> 
+                <Link to="/chef-pessoal" className='text-xl py-4 flex cursor-pointer'>Chief Pessoal</Link> 
                 <Link to="/help" className='text-xl py-4 flex cursor-pointer'>  Ajuda</Link>
                 
             </ul>
