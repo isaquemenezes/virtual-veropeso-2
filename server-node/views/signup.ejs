@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ver O Peso Virtual • Nova conta</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/login.css">
+	</head>
+	<body>
+		<section class="prompt">
+			<h3>Registre-se Para </h3>
+			<p>Monetizar suas receitas. 
+				Ganhar dinheiro ao cozinhar seu prato favorito e muito +</p>
+
+			<form action="/signup" method="post">
+
+				<section>
+					<label for="username">Registre um Username</label>
+					<input id="username" name="username" type="text" autocomplete="username" required>
+				</section>
+
+				<section>
+					<label for="new-password">Registre um Senha</label>
+					<input id="new-password" name="password" type="password" autocomplete="new-password" required>
+				</section>
+				
+				<button type="submit">Registrar</button>
+			</form>
+
+			<p class="help">Já tem conta? <a href="/login">Entrar</a></p>
+		</section>
+
+		<footer class="info">
+			<p>Created by <a href="">Equipe 5</a></p>
+			<p>Part of <a href="https://todomvc.com">DevS Pai D'agua</a></p>
+			<p>Authentication powered by <a href="">UFPA</a></p>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Express • TodoMVC</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/app.css">
+	</head>
+	<body>
+		<section class="todoapp">
+			<nav class="nav">
+				<ul>
+					<li class="user"><%= user.username %></li>
+					<li>
+						<form action="/logout" method="post">
+							<button class="logout" type="submit">Sign out</button>
+						</form>
+					</li>
+					<li>
+						<a href="/dashboard">Dashboard</a>
+					</li>
+					<li>
+						<a href="/">Home</a>
+					</li>
+				</ul>
+			</nav>
+        </section>
+
+         <section class="todohome">
+			<header>
+                <h2>Dashboard</h2>
+				<h1> New </h1>
+
+			</header>
+			
+			
+		</section>
+
+		<footer class="info">
+			<p>Created by <a href="">Equipe 5</a></p>
+			<p>Part of <a href="https://todomvc.com">DevS Pai D'agua</a></p>
+			<p>Authentication powered by <a href="">UFPA</a></p>
+		</footer>
+		
+	</body>
+</html>

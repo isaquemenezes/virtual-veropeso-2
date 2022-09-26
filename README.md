@@ -34,7 +34,8 @@ Estamos usando o mariadb e phpmyadmin
 - [] Update
 - [] Delete
 
-
+### Framework
+https://todomvc.com
 
 ### Referenciais vídeos
 https://www.youtube.com/watch?v=_S2GKnFpdtE

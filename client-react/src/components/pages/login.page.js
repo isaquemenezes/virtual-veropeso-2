@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Axios from 'axios';
+import React, { useState } from "react";
+import aaxios from 'axios';
 import { Link } from "react-router-dom"
 
 
@@ -7,39 +7,14 @@ function LoginUser() {
 
   //Config DB
   const [username, setUsername] = useState("");
-  const [cidade, setCidade] = useState("");
-
-  const [userList, setUserDataList] = useState([]);
-
-  useEffect(function (){
-    Axios.get("http://127.0.0.1:5000/api/select").then(function (response){
-      // console.log(response);
-      // console.log(response.data);
-      setUserDataList(response.data);
-    });
-  }, []);
+  const [password, setPassword] = useState("");
 
   const submitSet = () => {
     
-    // Axios.post("http://127.0.0.1:5000/api/insert", {
-    //   username: username, 
-    //   cidade:cidade 
-    // }).then(() => {
-    //   alert("Successful Insert!!");
-    // });
-
-    Axios.post("http://127.0.0.1:5000/api/insert", {
-       username: username, 
-       cidade:cidade 
-     });
-
-     setUserDataList([
-      ...userList,
-      {
-        username: username,
-        cidade:cidade
-      },
-    ]);
+    aaxios.post("http://127.0.0.1:5000/login/password", {
+      username: username, 
+      password:password
+    });
 
   };
 
@@ -97,7 +72,14 @@ function LoginUser() {
 
     {/*  Input */}
     <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-        <input className='bg-transparent p-2 w-full focus:outline-none' type='text' />
+        <input 
+          className='bg-transparent p-2 w-full focus:outline-none' 
+          type='text'
+          name="username" 
+          onChange={(event) =>{
+            setUsername(event.target.value)
+          }}
+        />
     </div>   
  
 </div>
@@ -112,7 +94,14 @@ function LoginUser() {
 
     {/*  Input */}
     <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-        <input className='bg-transparent p-2 w-full focus:outline-none' type='text' />
+        <input 
+          className='bg-transparent p-2 w-full focus:outline-none' 
+          type='text' 
+          name="password"
+          onChange={(event) => {
+            setPassword(event.target.value)
+          }}
+        />
     </div>   
 
 </div>
@@ -121,7 +110,7 @@ function LoginUser() {
 {/* Login Register button */}
 <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
 
-    <button className='bg-black text-white md:flex items-center py-2 rounded-full'>
+    <button onClick={submitSet} className='bg-black text-white md:flex items-center py-2 rounded-full'>
     Entrar
     </button>
 

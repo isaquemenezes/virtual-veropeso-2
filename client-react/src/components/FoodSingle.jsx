@@ -113,7 +113,7 @@ const Food = () => {
 
                 
 
-              <Link to="/chief-pessoal"  className='cursor-pointer'> 
+              <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
                   <button
                     className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
                   >

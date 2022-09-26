@@ -7,34 +7,29 @@ import Navbar from '../navBar'
 function RegisterUser() {
 
   //Config DB
-  const [_name, setNome] = useState("");
-  const [_contato, setContato] = useState("");
-  const [_pass, setPassword] = useState("");
+  const [_username, setUserNome] = useState("");
+  const [_password, setPassword] = useState("");
 
   const [userList, setUserDataList] = useState([]);
 
 
   const submitSet = () => {
 
-    Axios.post("http://127.0.0.1:5000/api/usuariocadastro", {
-       Nome: _name, 
-       Contato:_contato,
-       Senha:_pass
-
+    Axios.post("http://127.0.0.1:5000/signup", {
+       username: _username, 
+       password: _password
      });
 
      setUserDataList([
       ...userList,
       {
-        nome: _name, 
-        contato:_contato,
-        senha:_pass
+        username: _username, 
+        password:_password
       },
     ]);
 
     //clear imputs
-    setNome("");
-    setContato("");
+    setUserNome("");
     setPassword("");
 
   };
@@ -53,8 +48,7 @@ function RegisterUser() {
                </h2>
                 <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
 
-            </div>
-            
+            </div>            
         </div>
     </div>
 
@@ -64,43 +58,27 @@ function RegisterUser() {
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
       <div className='flex items-center'>
-          <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome </p>
+          <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome de Usuário </p>
       </div>
-      <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-          <input className='bg-transparent p-2 w-full focus:outline-none' type='text' value={_name} placeholder="Nome" onChange={(e)=>{ setNome(e.target.value) }} />
-      </div> 
-    </div>
-
-    <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-      <div className='flex items-center'>
-
-        <p className='text-2xl sm:text-2xl lg:text-2xl px-2'> Contato </p>
-
-      </div>
-
-      
       <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
-            type='text'
-            value={_contato}
-            placeholder="919..." 
-            onChange={(e)=>{
-              setContato(e.target.value)
-            }} 
-          />
-      </div>   
-
+            type='text' 
+            value={_username} 
+            placeholder="Nome de usuario" 
+            onChange={(e)=>{ 
+              setUserNome(e.target.value) 
+              }} />
+      </div> 
     </div>
+
+  
 
   
     <div className='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
       <div className='flex items-center'>
-
         <p className='text-2xl sm:text-2xl lg:text-2xl px-2'>Senha </p>
-
       </div>
 
       {/*  Input */}
@@ -108,17 +86,14 @@ function RegisterUser() {
           <input 
             className='bg-transparent p-2 w-full focus:outline-none' 
             type='password'
-            value={_pass} 
+            value={_password} 
             onChange={(e)=>{
               setPassword(e.target.value)
             }} 
           />
-      </div>   
-
-    
+      </div>  
     </div>
 
-    {/* Login Register button */}
     <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
 
       <button onClick={submitSet} className='bg-black text-white md:flex items-center py-2 rounded-full'>
@@ -127,10 +102,7 @@ function RegisterUser() {
 
       <button className='bg-white text-black md:flex items-center py-2 rounded-full ml-10'> 
           <Link to="/login"> Entrar</Link>
-      </button>  
-
-      
-
+      </button>   
     </div>    
 
     {/* Login Register Social  */}

@@ -1,6 +1,6 @@
 import { Link  } from "react-router-dom";
 
-const ChiefPessoal = () => {
+const AboutChefPessoal = () => {
 
 
   
@@ -85,4 +85,4 @@ const ChiefPessoal = () => {
     );
   };
   
-  export default ChiefPessoal;
+  export default AboutChefPessoal;

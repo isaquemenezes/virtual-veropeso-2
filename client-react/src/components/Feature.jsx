@@ -45,7 +45,7 @@ const FeatureCards = () => {
             Transforme sua casa em um restaurante com um Chef Pessoal.
             
           </p>
-          <Link to="/chef-pessoal" >
+          <Link to="/sobre-chef-pessoal" >
           <button 
             className='border-white bg-white text-black mx-2 absolute bottom-4'>
               Saiba +

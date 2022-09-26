@@ -1,17 +1,14 @@
 import React from 'react';
-
-import App from  "./App"
-import About from './components/pages/about.page';
-import Help from "./components/pages/help.page";
-import Login from "./components/pages/login.page";
-import AboutChiefPessoal from "./components/pages/about-chef-pessoal.page";
-import RegisterUser from './components/pages/usuariocadastro.page';
-import Feirante from './components/pages/feirante.page';
-import FoodSingle from './components/pages/detalhe-comida.page';
-
-import Manager from './components/pageUser/manager';
 import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 
+import App from  "./App";
+import IndexUser from "./pageUser/index";
+import Help from "./components/pages/help.page";
+import Login from "./components/pages/login.page";
+import AboutChefPessoal from "./components/pages/about-chef-pessoal.page";
+import RegisterUser from './components/pages/usuariocadastro.page';
+
+import FoodSingle from './components/pages/detalhe-comida.page';
 
 function routesClient () {
 
@@ -20,18 +17,15 @@ function routesClient () {
             <Routes>
         
                 <Route exact path='/' element={<App />} />
+                <Route path='/index' element={<IndexUser />} />
 
-                <Route path='/cadastro-usuario' element={<RegisterUser />} />
-                <Route path='/feirante' element={<Feirante />} />
-                
+                <Route path='/cadastro-usuario' element={<RegisterUser />} />                
                 <Route path='/login' element={<Login />} />
-                <Route path='/chef-pessoal' element={<AboutChiefPessoal />} />
+                <Route path='/sobre-chef-pessoal' element={<AboutChefPessoal />} />
+                
                 <Route path='/help' element={<Help />} />
-                <Route path='/manager' element={<Manager />} />
 
                 <Route path='/food_single/:food_id' element={<FoodSingle />} />
-
-
             </Routes>
         </ BrowserRouter>
     )
