@@ -1,42 +1,135 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ver O Peso Virtual • Nova conta</title>
-		<link rel="stylesheet" href="/css/base.css">
-		<link rel="stylesheet" href="/css/index.css">
-		<link rel="stylesheet" href="/css/login.css">
+		<link rel="stylesheet" href="/css/tailwind.css">
 	</head>
 	<body>
-		<section class="prompt">
-			<h3>Registre-se Para </h3>
-			<p>Monetizar suas receitas. 
-				Ganhar dinheiro ao cozinhar seu prato favorito e muito +</p>
+    
+    <div class='max-w-[1640px] mx-auto mt-20 mb-40 p-4'>
+        <div class='max-h-[500px] relative'>
 
-			<form action="/signup" method="post">
+            <div class='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
+               <h2 class='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
+               Crie Uma Conta Grátis              
+               </h2>
+                <p class='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
 
-				<section>
-					<label for="username">Registre um Username</label>
-					<input id="username" name="username" type="text" autocomplete="username" required>
-				</section>
+            </div>            
+        </div>
+    </div>
+  
+    <form action="/signup" method="post">
 
-				<section>
-					<label for="new-password">Registre um Senha</label>
-					<input id="new-password" name="password" type="password" autocomplete="new-password" required>
-				</section>
-				
-				<button type="submit">Registrar</button>
-			</form>
+        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
-			<p class="help">Já tem conta? <a href="/login">Entrar</a></p>
-		</section>
+            <div class='flex items-center'>
+                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome </p>
+            </div>
+            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                <input 
+                    class='bg-transparent p-2 w-full focus:outline-none' 
+                    type='text' 
+                    id="name" 
+                    name="name"
+                    placeholder="Nome" 
+                    required
+                />
+            </div> 
+        </div>
 
-		<footer class="info">
-			<p>Created by <a href="">Equipe 5</a></p>
-			<p>Part of <a href="https://todomvc.com">DevS Pai D'agua</a></p>
-			<p>Authentication powered by <a href="">UFPA</a></p>
-		</footer>
+        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
-	</body>
+            <div class='flex items-center'>
+                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Email </p>
+            </div>
+            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                <input 
+                    class='bg-transparent p-2 w-full focus:outline-none' 
+                    type='email' 
+                    id="email" 
+                    name="email"
+                    placeholder="Se melhor email" 
+                    required
+                />
+            </div> 
+        </div>
+
+        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+            <div class='flex items-center'>
+                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Usuário </p>
+            </div>
+            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                <input 
+                    class='bg-transparent p-2 w-full focus:outline-none' 
+                    type='text' 
+                    id="username" 
+                    name="username"
+                    placeholder="Nome de usuario" 
+                    required
+                />
+            </div> 
+        </div>
+    
+        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+            <div class='flex items-center'>
+                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Senha </p>
+            </div>
+            
+            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                <input 
+                    class='bg-transparent p-2 w-full focus:outline-none' 
+                    id='new-password' 
+                    type='password' 
+                    name='password' 
+                    placeholder="Sua Senha" 
+                    required
+                />
+            </div>  
+        </div>
+
+        <div class='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+
+            <button type="submit" class='bg-slate-800 font-semibold tracking-widest text-white pl-5 pr-5 py-2 text-lg md:flex items-center py-2 rounded-full'>
+                Registrar
+            </button>
+    </form>
+
+            <button class='bg-white border-2 border-slate-800 font-semibold tracking-widest  text-black md:flex items-center pl-3 pr-3 py-2 ml-10 rounded-full'> 
+                <a href="/login"> Entrar</a>
+            </button>   
+        </div>    
+
+    <div class='max-w-[1640px] mx-auto mt-20 mb-5 p-4'>
+        <div class='max-h-[500px] relative'>
+
+            <div class='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
+            
+              <p class='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>Registre-se Com sua Rede Favorita</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+    
+      <button class='bg-white text-blue-500 md:flex items-center py-2 rounded-full'>
+        Facebook
+      </button>
+
+      <button class='bg-white text-blue-400 md:flex items-center py-2 rounded-full ml-10'> 
+          <a href="#"> Google</a>
+      </button>    
+
+    </div>    
+   
+
+
+
+</body>
 </html>

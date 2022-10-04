@@ -13,7 +13,7 @@ function RegisterUser() {
   const [userList, setUserDataList] = useState([]);
 
 
-  const submitSet = () => {
+  const submitSetResgister = () => {
 
     Axios.post("http://127.0.0.1:5000/signup", {
        username: _username, 
@@ -44,7 +44,7 @@ function RegisterUser() {
             {/* Overlay */}
             <div className='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
                <h2 className='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
-               Crie Uma Conta Grátis              
+               Crie Uma Conta Grátis API              
                </h2>
                 <p className='text-black text-2xl sm:text-2xl lg:text-2xl px-2'>para ter acesso a mais recursos e benefícios</p>
 
@@ -96,7 +96,7 @@ function RegisterUser() {
 
     <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
 
-      <button onClick={submitSet} className='bg-black text-white md:flex items-center py-2 rounded-full'>
+      <button onClick={submitSetResgister} className='bg-black text-white md:flex items-center py-2 rounded-full'>
         Registrar
       </button>
 
@@ -121,7 +121,7 @@ function RegisterUser() {
 
     <div className='max-w-[640px] mx-auto flex justify-center items-center p-2'>
     
-      <button onClick={submitSet} className='bg-white text-blue-500 md:flex items-center py-2 rounded-full'>
+      <button onClick={submitSetResgister} className='bg-white text-blue-500 md:flex items-center py-2 rounded-full'>
         Facebook
       </button>
 
@@ -130,6 +130,7 @@ function RegisterUser() {
       </button>    
 
     </div>    
+   
 
 
 </>

@@ -4,6 +4,7 @@ import TextBanner from '../text-banner';
 import Features from '../Feature';
 import FoodSingle from '../FoodSingle';
 import Footer from '../Footer';
+import BidsChef from '../personalChef/BidsChef';
 
 
 class perfilFood extends Component {
@@ -16,6 +17,7 @@ class perfilFood extends Component {
                 
                 <Features />
                 <FoodSingle />
+                <BidsChef />
                 <Footer />
                
 

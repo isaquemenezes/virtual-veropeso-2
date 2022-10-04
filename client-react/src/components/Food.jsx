@@ -27,7 +27,6 @@ const Food = () => {
 
       <h1 className='text-orange-600 font-bold text-4xl text-center'> Pratos do Ver O Peso</h1>
 
-      {/* Filtrar */}
 
       <div className='flex flex-col lg:flex-row justify-between'>
 
@@ -106,18 +105,6 @@ const Food = () => {
 
                 </div>
 
-                  {/* <div 
-                    className='flex justify-between px-2 py-4'
-                  >
-                      <p>
-                        <button
-                            onClick={() => filterTypeId(item.id)}
-                            className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-                          >
-                            ver +
-                          </button>
-                      </p>
-                  </div> */}
               </div>
             </Link >
             

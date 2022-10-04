@@ -16,8 +16,9 @@ class IndexUser extends Component {
                 <TextBanner />
                 <Features />
                 <Food />  
-                <Bids />            
+                <Bids />     
                 <Footer />
+                
             </div>
         );
     }

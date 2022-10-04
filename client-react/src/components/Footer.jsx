@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { footer_social } from '../data/infofooter.js';
-import Banner from "../images/banner.jpeg"
+
 
 
 const Footer = () => {
@@ -13,21 +13,23 @@ const Footer = () => {
     
   return (
     <>
-        {/* <div className='  py-12'> */}
+      
 
         <div className='bg-gray-100 max-w-[1540px] m-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
             
-                    {/* <div className='bg-gray-100 rounded-lg p-4 flex justify-around items-center'> */}
+                    
 
                         {/* start about  */}
                         <div> 
                             <h2 className='text-orange-600 font-bold sm:text-xl text-center'>
-                                Sobre Nós
+                                Doc
                             </h2> 
                             <div className='text-center'>
                                        
-                            <h3>Ver o Peso Virtual é uma plataforma de indexação da cultura culinária paraense</h3>    
-                            <h3>Copyright @ Todos os direitos reservados</h3> </div> 
+                                <h3>Sobre</h3>
+                                <h3>Política de Privacidade</h3>    
+                                <h3>Copyright @ Todos os direitos reservados</h3> 
+                            </div> 
                         </div>
 
                     
@@ -68,7 +70,7 @@ const Footer = () => {
             
         </div>
 
-        {/* </div>  */}
+       
     </>
 
   );

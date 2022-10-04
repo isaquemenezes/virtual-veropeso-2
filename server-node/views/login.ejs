@@ -1,38 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Ver O Peso Virtual • Entrar</title>
-		<link rel="stylesheet" href="/css/base.css">
-		<link rel="stylesheet" href="/css/index.css">
-		<link rel="stylesheet" href="/css/login.css">
+		<link rel="stylesheet" href="/css/tailwind.css">
 	</head>
 	<body>
-		<section class="prompt">
-			
-			<h1>Entrar</h1>
-			
+        <form action="/login/password" method="post">
+            <div class='max-w-[1540px] mx-auto mt-20 mb-40 p-4'>
+                <div class='max-h-[500px] relative'>
+                    <div class='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
+                        <h2 class='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
+                            Entrar              
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+                
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'> Usuário </p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input class='bg-transparent p-2 w-full focus:outline-none' type='text' name="username" autofocus required/>
+                </div>   
+            
+            </div>
 
-			<form action="/login/password" method="post">
-				<section>
-					<label for="username">Username</label>
-					<input id="username" name="username" type="text" autocomplete="username" required autofocus>
-				</section>
-				<section>
-					<label for="current-password">Senha</label>
-					<input id="current-password" name="password" type="password" autocomplete="current-password" required>
-				</section>
-				<button type="submit">Entrar</button>
-			</form>
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+                
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'> Senha </p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input class='bg-transparent p-2 w-full focus:outline-none' type='password' name="password" required/>
+                </div> 
 
-			<p class="help">não tem conta? <a href="/signup">Registra-se</a></p>
+            </div>
 
-		</section>
-		<footer class="info">
-			<p>Created by <a href="">Equipe 5</a></p>
-			<p>Part of <a href="https://todomvc.com">DevS Pai D'agua</a></p>
-			<p>Authentication powered by <a href="">UFPA</a></p>
-		</footer>
-	</body>
+            <div class='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+
+                <button type="submit" class='bg-slate-800 font-semibold tracking-widest text-white pl-5 pr-5 py-2 text-lg md:flex items-center py-2 rounded-full'>
+                    Entrar
+                </button>
+        </form>
+
+                <button class='bg-white border-2 border-slate-800 font-semibold tracking-widest  text-black md:flex items-center pl-3 pr-3 py-2 ml-10 rounded-full'> 
+                    <a href="/signup"> Registre-se</a>
+                </button>
+
+            </div>
+
+    </body>
 </html>

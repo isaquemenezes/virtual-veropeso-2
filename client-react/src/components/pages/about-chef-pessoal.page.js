@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Navbar from '../navBar'
 import TextBanner from '../text-banner';
 import Features from '../Feature';
-import ChiefPessoal from '../ChefPessoal';
+import ChefPessoal from '../personalChef/ChefPessoal';
 import Footer from '../Footer';
 import Bids from '../Bids';
-
 
 
 class AboutChefPessoal extends Component {
@@ -14,9 +13,9 @@ class AboutChefPessoal extends Component {
             <>
             <Navbar />
             <TextBanner />
-            <Features />
-            <ChiefPessoal />
+            <ChefPessoal /> 
             <Bids />
+            <Features />
             <Footer />
             </>
         )

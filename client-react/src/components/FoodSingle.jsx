@@ -19,12 +19,11 @@ const Food = () => {
   
 
   return (
-    <div className='max-w-[1640px] m-auto px-4 py-12'>
+    <div className='max-w-[1540px] m-auto px-4 py-12'>
 
       <h1 className='text-orange-600 font-bold text-4xl text-center'> Como fazer este prato (Receita) </h1>
 
       {/* Filtrar */}
-
       <div className='flex flex-col lg:flex-row justify-between'>
 
         {/* Fittrar Tipo */}
@@ -69,7 +68,7 @@ const Food = () => {
       </div>
 
       {/* Display Receita */}
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
+      <div className='max-w-[800px] m-auto grid grid-cols-1 lg:grid-cols-1 gap-6 pt-4'>
 
         {
           
@@ -82,22 +81,21 @@ const Food = () => {
                 alt={found.name}
                 className='w-full h-[200px] object-cover rounded-t-lg'
               />
-               <p> valor da receita
-                  <span 
-                    className='bg-orange-500 text-white p-1 rounded-full'> 
-                    aproximadamente* {found.price}
-                  </span>
-                 
-                </p>
-              <div className=' justify-between px-2 py-4'>
+             
+              <div className='flex justify-between px-2 py-4'>
              
              
                 <p className='font-bold'>{found.name} </p> 
+                <p className='font-bold'> </p> 
+                <p className='font-bold'> valor da receita <span 
+                    className='bg-orange-500 text-white p-1 rounded-full'> 
+                    aproximadamente* {found.price}
+                  </span> </p> 
 
               
                
               </div>
-              <div className=' justify-between px-2 py-4'>
+              <div className='justify-between px-2 py-4'>
                 <p 
                   className='font-bold'>
                     INGREDIENTES: {found.ingredientes}<br />
@@ -110,8 +108,6 @@ const Food = () => {
                     Onde encontrar: {found.local}
                 </p> 
               </div>
-
-                
 
               <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
                   <button

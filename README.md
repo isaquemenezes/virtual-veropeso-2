@@ -17,8 +17,8 @@ Estamos usando o mariadb e phpmyadmin
 - Repita os passos pra rodar o server-node
 
 ## branch Front-end client-react
-
-
+- [x] login - API 
+- [x] cadastro de user - API
 
 
 ## branch Back-end server-node 
