@@ -70,8 +70,7 @@ const Food = () => {
       {/* Display Receita */}
       <div className='max-w-[800px] m-auto grid grid-cols-1 lg:grid-cols-1 gap-6 pt-4'>
 
-        {
-          
+        {          
             <div
               key={found.id}
               className='border shadow-lg rounded-lg hover:scale-105 duration-300'
@@ -83,17 +82,14 @@ const Food = () => {
               />
              
               <div className='flex justify-between px-2 py-4'>
-             
-             
+            
                 <p className='font-bold'>{found.name} </p> 
                 <p className='font-bold'> </p> 
                 <p className='font-bold'> valor da receita <span 
                     className='bg-orange-500 text-white p-1 rounded-full'> 
                     aproximadamente* {found.price}
-                  </span> </p> 
+                  </span> </p>
 
-              
-               
               </div>
               <div className='justify-between px-2 py-4'>
                 <p 
@@ -117,7 +113,6 @@ const Food = () => {
                   </button>
                 </Link >
             </div>
-        
         }
       </div>
       

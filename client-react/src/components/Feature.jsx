@@ -36,20 +36,19 @@ const FeatureCards = () => {
       {/* Features Two */}
       <div className='rounded-xl relative hover:scale-105 duration-300'>
 
-      
         <div className='absolute w-full h-full bg-black/50 rounded-xl text-white'>
           <p className='font-bold text-2xl px-2 pt-4'>
             Chef Pessoal
           </p>
-          <p className='px-2'>
-            Transforme sua casa em um restaurante com um Chef Pessoal.
-            
-          </p>
+          <p className='px-2'> Transforme sua casa em um restaurante com um Chef Pessoal. </p>
+
           <Link to="/sobre-chef-pessoal" >
-          <button 
-            className='border-white bg-white text-black mx-2 absolute bottom-4'>
-              Saiba +
-            </button></Link> 
+            <button 
+              className='border-white bg-white text-black mx-2 absolute bottom-4'>
+                Saiba +
+            </button>
+          </Link> 
+
         </div>
         <img
           className='max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl'

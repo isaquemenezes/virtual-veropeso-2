@@ -42,12 +42,9 @@ const Navbar = () => {
         <a href="http://127.0.0.1:5000/signup"> Registre-se </a>
       </button>
 
-      
 
       {/* Mobile Menu */}
-      {/* Overlay */}
       {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
-      
 
       {/* Side drawer menu */}
       <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300' }>
@@ -65,14 +62,9 @@ const Navbar = () => {
         <nav>
             <ul className='flex flex-col p-4 text-gray-800 duration-10000'>
            
-                <Link to="/" className='text-xl py-4 flex cursor-pointer'>  Home</Link>
-                <a href="http://127.0.0.1:5000/signup" className='text-xl py-4 flex cursor-pointer'> Registre-se</a>
-               
-                <Link to="/cadastro-usuario" className='text-xl py-4 flex cursor-pointer'>UserAdd </Link>
-                <Link to="/login" className='text-xl py-4 flex cursor-pointer'> Entrar</Link>
-                <Link to="/sobre-chef-pessoal" className='text-xl py-4 flex cursor-pointer'>Sobre Chief Pessoal</Link>
-                <a href="http://127.0.0.1:5000/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a> 
-                <Link to="/help" className='text-xl py-4 flex cursor-pointer'>  Ajuda</Link>
+              <Link to="/" className='text-xl py-4 flex cursor-pointer'>Home</Link>
+              <Link to="/sobre-chef-pessoal" className='text-xl py-4 flex cursor-pointer'>Sobre Chief Pessoal</Link>
+              <a href="http://127.0.0.1:5000/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a> 
                 
             </ul>
         </nav>

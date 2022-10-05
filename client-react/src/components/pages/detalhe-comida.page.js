@@ -14,13 +14,10 @@ class perfilFood extends Component {
             <div>
                 <Navbar />
                 <TextBanner />
-                
                 <Features />
                 <FoodSingle />
                 <BidsChef />
-                <Footer />
-               
-
+                <Footer />              
             </div>
             );
         }

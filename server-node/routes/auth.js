@@ -34,9 +34,7 @@ passport.serializeUser(function(user, cb) {
         id: user.id,
         username: user.username,
         name: user.name,
-        email:user.email,
-        hashed: user.hashed_password,
-        salt: user.salt
+        email:user.email
     });
   });
 });

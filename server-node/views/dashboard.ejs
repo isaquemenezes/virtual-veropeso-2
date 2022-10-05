@@ -14,190 +14,190 @@
             <div class='flex items-center'>
         
               <h1 class='text-2xl sm:text-3xl lg:text-4xl px-2 cursor-pointer'>
-                <a href="http://127.0.0.1:3000/index" > 
-                  Ver o Peso  
-                  <span class='font-bold'> Virtual</span>
-                </a>
+                <a href="http://127.0.0.1:3000/index" >  Ver o Peso                   
+                  <span class='font-bold'> Virtual</span></a>
               </h1>        
             </div>
           
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-        
-              <input class='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='buscar' />
-      
+            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>        
+              <input class='bg-transparent p-2 w-full focus:outline-none' type='text' placeholder='buscar' />      
             </div>
       
             <form action="http://127.0.0.1:5000/logout" method='post'>
               <button  type="submit" class='bg-black text-white hidden md:flex items-center pr-3 pl-3 py-2 rounded-full'>
                 Logout  
               </button>
-            </form>
-      
-             
-          </div>
+            </form>             
+        </div>
 
-    <div class='max-w-[1540px] mx-auto mt-20 mb-40 p-4'>
-        <div class='max-h-[500px] relative'>
+        <main class="max-w-[740px] mx-auto mb-40 border-2 bg-orange-100">
+        <section class="max-w-[740px]  mx-auto mb-40 ">
+        <div class='max-w-[1540px] mx-auto mt-20 mb-40 p-4'>
+            <div class='max-h-[500px] relative'>
 
-            <div class='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
-               <h2 class='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
-                <%= user.name %>              
-               </h2>
+                <div class='absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 flex flex-col justify-center items-center'>
+                <h2 class='px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-500'> 
+                    <%= user.name %>              
+                </h2>
+                    
+                    <div class='max-w-[940px] mt-6 mx-auto flex justify-center items-center p-2'>
+                        <button class='font-semibold tracking-widest bg-orange-300 text-blue-500 md:flex pl-3 pr-3 py-2 rounded-full'>
+                            <a href="#" >Chef Pessoal </a>
+                        </button>
                 
-                <div class='max-w-[940px] mt-6 mx-auto flex justify-center items-center p-2'>
-            
-                    <button class='font-semibold tracking-widest bg-orange-300 text-blue-500 md:flex pl-3 pr-3 py-2 rounded-full'>
-                    <a href="#" >Chef Pessoal </a>
-                    </button>
-            
-                    <button class='font-semibold tracking-widest bg-orange-300 text-blue-400 md:flex pl-3 pr-3 py-2 rounded-full ml-10'> 
-                        <a href="#" >Monetizar Minhas Receitas</a>
-                    </button>    
-            
-                </div>
-            </div>            
-        </div>
-    </div>
-  
-    <form action="/signup" method="post">
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome </p>
+                        <button class='font-semibold tracking-widest bg-orange-300 text-blue-400 md:flex pl-3 pr-3 py-2 rounded-full ml-10'> 
+                            <a href="#" >Monetizar Minhas Receitas</a>
+                        </button>    
+                
+                    </div>
+                </div>            
             </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="" 
-                    value="<%= user.name %>"
-                    placeholder="Nome" 
-                    required
-                />
-            </div> 
         </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Email </p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='email' 
-                    id="email" 
-                    value="<%= user.email %>"
-                    placeholder="Se melhor email" 
-                    required
-                />
-            </div> 
-        </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Usuário </p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="user" 
-                    value="<%= user.username %>"
-                    placeholder="Nome de usuario" 
-                    required
-                />
-            </div> 
-        </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Cidade</p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="user" 
-                    name="cidade"
-                    placeholder="Sua Cidade" 
-                    required
-                />
-            </div> 
-        </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Bairro</p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="user" 
-                    name="bairro"
-                    placeholder="Seu bairro" 
-                    required
-                />
-            </div> 
-        </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>WhatsApp</p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="user" 
-                    name="Whatsapp"
-                    placeholder="+55 (91) 9 ..." 
-                    required
-                />
-            </div> 
-        </div>
-
-        <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
-
-            <div class='flex items-center'>
-                <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Rede Social</p>
-            </div>
-            <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-                <input 
-                    class='bg-transparent p-2 w-full focus:outline-none' 
-                    type='text' 
-                    id="user" 
-                    name="rede_social"
-                    placeholder="@usuário" 
-                    required
-                />
-            </div> 
-        </div>
-    
+        </section>
         
+        <section class="max-w-[740px] mx-auto mb-40">
+            <div class='max-h-[500px]'>
+                <div class='w-full h-full max-h-[500px] flex flex-col justify-center items-center'>
+                    <h2 class='px-4 text-2xl sm:text-3xl  md:text-4xl lg:text-5xl font-bold '> 
+                        Meus Dados             
+                    </h2>
+                    <p class="text-white">área dados</p>
+                                  
+                </div>            
+            </div>
+        <form action="/signup" method="post" >
 
-        <div class='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
-            <button type="submit" class='bg-slate-800 font-semibold tracking-widest text-white pl-5 pr-5 py-2 text-lg md:flex items-center py-2 rounded-full'>
-                Atualizar 
-            </button>
-    </form>
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Nome </p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="" 
+                        value="<%= user.name %>"
+                        placeholder="Nome" 
+                        required
+                    />
+                </div> 
+            </div>
 
-            
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
 
-             
-        </div>    
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Email </p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='email' 
+                        id="email" 
+                        value="<%= user.email %>"
+                        placeholder="Se melhor email" 
+                        required
+                    />
+                </div> 
+            </div>
 
-   
- 
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Usuário </p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="user" 
+                        value="<%= user.username %>"
+                        placeholder="Nome de usuario" 
+                        required
+                    />
+                </div> 
+            </div>
+
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Cidade</p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="user" 
+                        name="cidade"
+                        placeholder="Sua Cidade" 
+                        required
+                    />
+                </div> 
+            </div>
+
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Bairro</p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="user" 
+                        name="bairro"
+                        placeholder="Seu bairro" 
+                        required
+                    />
+                </div> 
+            </div>
+
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>WhatsApp</p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="user" 
+                        name="Whatsapp"
+                        placeholder="+55 (91) 9 ..." 
+                        required
+                    />
+                </div> 
+            </div>
+
+            <div class='max-w-[640px] mx-auto flex justify-between items-center p-2'>
+
+                <div class='flex items-center'>
+                    <p class='text-2xl sm:text-2xl lg:text-2xl px-2'>Rede Social</p>
+                </div>
+                <div class='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+                    <input 
+                        class='bg-transparent p-2 w-full focus:outline-none' 
+                        type='text' 
+                        id="user" 
+                        name="rede_social"
+                        placeholder="@usuário" 
+                        required
+                    />
+                </div> 
+            </div>
     
-    <div class='fixed w-full bottom-0 bg-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
+            <div class='max-w-[640px] mx-auto flex justify-center items-center p-2'>
+
+                <button type="submit" class='bg-slate-800 font-semibold tracking-widest text-white pl-5 pr-5 py-2 text-lg md:flex items-center py-2 rounded-full'>
+                    Atualizar
+                </button>         
+            </div>
+        </form>
+        </section>   
+        </main> 
+
+
+        <div class='fixed w-full bottom-0 bg-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
        
         <div> 
                 <h2 class='text-orange-600 font-bold sm:text-xl text-center'>
@@ -243,7 +243,7 @@
                     </a> 
                 </div>
         </div>
-    </div>
+        </div>
 
-</body>
+    </body>
 </html>

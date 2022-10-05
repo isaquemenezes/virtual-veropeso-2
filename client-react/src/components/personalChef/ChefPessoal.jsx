@@ -3,17 +3,16 @@ const AboutChefPessoal = () => {
       <div className='max-w-[1540px] m-auto px-4 py-12'>
 
       <h1 className='text-orange-600 font-bold text-4xl text-center'>
-      Transforme a sua casa num restaurante com os nossos Chefs Pessoais 
+        Transforme a sua casa num restaurante com os nossos Chefs Pessoais 
       </h1>
+      
       <p className='text-black-600 font-bold text-2xl text-center'> 
         Eles são especialista em cada prato feito; e você não precisa mais gastar muito com isto 
       </p>
 
-      {/* bids */}
+     
       <div className='m-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
 
-        
-          
             <div  className='bg-gray-100 rounded-lg p-4 items-center' >
               <h2 className='font-bold sm:text-xl text-center'>A Culinária</h2><br />
             
@@ -23,10 +22,13 @@ const AboutChefPessoal = () => {
               />
               <br />  
               <p>
-                O seu Chef Pessoal chegará com todos os ingredientes <br /> <br />necessários para preparar a sua tão sonhada refeição.<br /><br />
+                O seu Chef Pessoal chegará com todos os ingredientes <br /> <br />
+                necessários para preparar a sua tão sonhada refeição.<br /><br />
                
 
-                Sente-se e desfrute do seu próprio show culinário!<br /> Assista e aprenda novas receitas enquanto<br /><br /> seu chef prepara uma boa refeição na mesa do seu chef interno
+                Sente-se e desfrute do seu próprio show culinário!<br />
+                 Assista e aprenda novas receitas enquanto<br /><br />
+                  seu chef prepara uma boa refeição na mesa do seu chef interno
               </p>
             </div>
 
@@ -38,7 +40,8 @@ const AboutChefPessoal = () => {
               />
               <br />
               <p>
-              Seu chef cuidará da sua festa durante toda a experiência; e sim! Isso significa que os deveres do anfitrião estão fora da mesa para você.
+              Seu chef cuidará da sua festa durante toda a experiência; e sim! Isso significa que os 
+              deveres do anfitrião estão fora da mesa para você.
               </p><br />
               
               <p>
@@ -54,24 +57,19 @@ const AboutChefPessoal = () => {
               />
               <br />
               <p>
-              O chef Pessoal é uma pessoa altamente capacitada em determinado prato.<br /><br />
-              Ele cuida exclusivamente do preparativo do prato escolhido pelo cliente.<br />
-
-
+                O chef Pessoal é uma pessoa altamente capacitada em determinado prato.<br /><br />
+                Ele cuida exclusivamente do preparativo do prato escolhido pelo cliente.<br />
               </p><br />
               
               <p>
-              Sua função será fazer da sua experiência com aquele prato se elevar para outro nível.
+                Sua função será fazer da sua experiência com aquele prato se elevar para outro nível.
               </p>
             </div>
-
         
       </div>
 
       <p>Como Funciona ?</p>
       <p>Vejo os Melhores Chef de Cada Prato </p>
-
-      
 
     </div>
     );

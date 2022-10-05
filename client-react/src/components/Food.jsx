@@ -27,7 +27,6 @@ const Food = () => {
 
       <h1 className='text-orange-600 font-bold text-4xl text-center'> Pratos do Ver O Peso</h1>
 
-
       <div className='flex flex-col lg:flex-row justify-between'>
 
         {/* Filtrar Tipo */}
@@ -101,10 +100,7 @@ const Food = () => {
                     </span> 
                   </p> 
 
-                
-
                 </div>
-
               </div>
             </Link >
             
