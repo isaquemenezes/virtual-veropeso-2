@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { data } from '../data/data.js';
 import { Link } from "react-router-dom";
+import {FaStar} from 'react-icons/fa';
+import {AiOutlineStar} from 'react-icons/ai';
+import { MdOutlineStarHalf } from 'react-icons/md';
 
 const Food = () => {
-  //   console.log(data);
+  
   const [foods, setFoods] = useState(data);
 
   //   Filtrar Tipos /massas/carne
@@ -102,6 +105,14 @@ const Food = () => {
 
                 </div>
               </div>
+
+              <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={17} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={17} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={17} style={{ fill: '#ff8c00' }}/>
+                    <MdOutlineStarHalf size={17} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={17} style={{ fill: '#ff8c00' }}/>
+                  </div>
             </Link >
             
           ))

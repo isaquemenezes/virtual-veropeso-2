@@ -1,7 +1,10 @@
 import React from 'react';
-
+import {FaStar} from 'react-icons/fa';
+import {AiOutlineStar} from 'react-icons/ai';
+import { MdOutlineStarHalf } from 'react-icons/md';
 import { dataDetails } from '../data/data-details';
 import { Link, useParams } from "react-router-dom";
+
 
 const Food = () => {
   // get ID from url
@@ -15,9 +18,6 @@ const Food = () => {
   });
 
   
-  
-  
-
   return (
     <div className='max-w-[1540px] m-auto px-4 py-12'>
 
@@ -32,33 +32,14 @@ const Food = () => {
           <p className='font-bold text-gray-700'>Filtrar Por</p>
           <div className='flex justfiy-between flex-wrap'>
 
-          <button 
-              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-              to="/"> 
-           Todos 
-            </button>
+          <Link to="/">
+          <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+             
+             Todos 
+            </button></Link>
 
 
-            <button
-            
-              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-            >
-              Massas
-            </button>
-
-            <button
-              
-              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-            >
-              Carnes
-            </button>
-
-            <button
-            
-              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-            >
-              Saladas
-            </button>
+       
           </div>
         </div>          
         <div>
@@ -82,36 +63,124 @@ const Food = () => {
               />
              
               <div className='flex justify-between px-2 py-4'>
-            
+               
                 <p className='font-bold'>{found.name} </p> 
                 <p className='font-bold'> </p> 
-                <p className='font-bold'> valor da receita <span 
-                    className='bg-orange-500 text-white p-1 rounded-full'> 
-                    aproximadamente* {found.price}
-                  </span> </p>
+                <p className='font-bold'> valor da receita 
+                  <span className='bg-orange-500 text-white p-1 rounded-full'> 
+                    {found.price}
+                  </span> 
+                </p>
 
               </div>
               <div className='justify-between px-2 py-4'>
-                <p 
-                  className='font-bold'>
-                    INGREDIENTES: {found.ingredientes}<br />
-                    MODO DE PREPARO: {found.modoprepara}  <br /><br />
-                </p> 
+
+                <p className='font-bold text-orange-600'> INGREDIENTES: </p> <br />
+                <p>{found.ingredientes}</p><br /><br />
+                <p className='font-bold text-orange-600'> MODO DE PREPARO:</p><br />
+                <p>{found.modoprepara}<br /><br /></p> 
+                   
+                
               </div>
+
               <div className=' justify-between px-2 py-4'>
                 <p 
                   className='font-bold'>
-                    Onde encontrar: {found.local}
+                    Chef Especialista neste prato: {found.local}
                 </p> 
               </div>
 
-              <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
-                  <button
-                    className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-                  >
-                    Contrate alguém especialista neste prato
+              <div className='max-w-[800px] m-auto grid grid-cols-3 lg:grid-cols-4 gap-6 pt-4'>
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+               
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Sandro - Centro
                   </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <MdOutlineStarHalf size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
                 </Link >
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Lucas - Jurunas
+                  </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <MdOutlineStarHalf size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
+                  
+                </Link >
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Mateus - São Brás
+                  </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <MdOutlineStarHalf size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
+                </Link >
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Rodrigo - Nazaré
+                  </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
+                </Link >
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Maria França-Marcos
+                  </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
+                </Link >
+
+                <Link to="/sobre-chef-pessoal"  className='cursor-pointer'> 
+                  <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white' >
+                    Sandra Pais - Ananindeua
+                  </button>
+
+                  <div className='flex justify-start px-2 py-4'>
+                    <FaStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                    <AiOutlineStar size={15} style={{ fill: '#ff8c00' }}/>
+                  </div>
+                </Link >
+              </div><br /><br /><br /><br />     
+
+             
+
             </div>
         }
       </div>
