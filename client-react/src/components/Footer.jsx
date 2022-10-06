@@ -6,13 +6,13 @@ const Footer = () => {
 
     // Social Media
     const found = footer_social.find(function (element){
-        return element.id == 1;
+        return element.id === 1;
     });
     
   return (
     <>
       
-        <div className='bg-gray-100 max-w-[1540px] m-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
+        <div className='bg-gray-100 pb-10 max-w-[1540px] m-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-6'>
             
             {/* start doc  */}
             <div> 
@@ -21,9 +21,9 @@ const Footer = () => {
                 </h2> 
                 <div className='text-center'>
                                        
-                    <h3>Sobre</h3>
+                    <h3>Sobre Nós</h3>
                     <h3>Política de Privacidade</h3>    
-                    <h3>Copyright @ Todos os direitos reservados</h3> 
+                    <h3>Termos de Uso </h3> 
                 </div> 
             </div>
 
@@ -62,6 +62,25 @@ const Footer = () => {
                     </ Link> 
                 </div>
             </div>
+            
+        </div>
+
+        <div className='bg-gray-100 max-w-[1540px] m-auto grid grid-cols-1 md:grid-cols-1 gap-6 py-6'>
+            
+           
+            <div> 
+               
+                <div className='text-center'>
+                                       
+                     
+                    <h3>Copyright @ Todos os direitos reservados</h3> 
+                </div> 
+            </div>
+
+                    
+          
+                        
+            
             
         </div>
        

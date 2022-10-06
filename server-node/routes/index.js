@@ -1,6 +1,6 @@
 var express = require('express');
 var db = require('../db');
-var passport = require('passport');
+
 const { ensureAuthenticated, forwardAuthenticated } = require('./rotaPrivate');
 
 // function fetchTodos(req, res, next) 
@@ -54,22 +54,12 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
   })
 );
 
-// router.post('/', function(req, res, next) {
-//   req.body.title = req.body.title.trim();
-//   next();
-// }, function(req, res, next) {
-//   if (req.body.title !== '') { return next(); }
-//   return res.redirect('/' + (req.body.filter || ''));
-// }, function(req, res, next) {
-//   db.run('INSERT INTO todos (owner_id, title, completed) VALUES (?, ?, ?)', [
-//     req.user.id,
-//     req.body.title,
-//     req.body.completed == true ? 1 : null
-//   ], function(err) {
-//     if (err) { return next(err); }
-//     return res.redirect('/' + (req.body.filter || ''));
-//   });
-// });
+
+router.get('/chef-personal', ensureAuthenticated, (req, res) =>
+  res.render('chef-personal', {
+    user: req.user
+  })
+);
 
 
 module.exports = router;
