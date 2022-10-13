@@ -62,4 +62,16 @@ router.get('/chef-personal', ensureAuthenticated, (req, res) =>
 );
 
 
+router.get('/start', (req, res) =>
+  res.render('start')
+);
+
+
+
+router.get('/tour', (req, res) =>
+  res.render('tour')
+);
+
+
+
 module.exports = router;

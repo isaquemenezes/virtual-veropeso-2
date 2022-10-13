@@ -38,8 +38,7 @@ const NavbarUser = () => {
       {/* Mobile Menu */}     
       {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
       
-      
-      <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-gray-200 z-10 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gray-200 z-10 duration-300' }>
+      <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-gray-100 z-10 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-gray-100 z-10 duration-300' }>
         <AiOutlineClose
           onClick={()=> setNav(!nav)}
           size={30}

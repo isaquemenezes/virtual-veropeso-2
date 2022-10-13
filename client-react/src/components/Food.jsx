@@ -78,32 +78,39 @@ const Food = () => {
           foods.map((item, index) => (
             <Link to={`/food_single/${item.id}`}  className='cursor-pointer'> 
            
-              <div 
-                key={index} 
+              <div  
                 className='border shadow-lg rounded-lg hover:scale-105 duration-300'>
                 <img 
                   src={item.image} 
                   alt={item.name} 
                   className='w-full h-[200px] object-cover rounded-t-lg' 
                 />
-                <div 
-                  className='flex justify-between px-2 py-4'>
-                  <p 
-                    className='font-bold'>
-                      {item.name} 
-                      <br />
-                      Barraca: 
-                      <span className='text-orange-600'> 
-                        {item.feirante} </span>  
+                 
+                <div className='absolute flex justify-start  px-2 py-4'>
+                  <img src={item.img_user} alt="" className='w-12 sm:h-[50px] rounded-lg' />
+                  
+                </div>
+                <div  className='realtive flex flex-row mt-3.5 px-16  '>
+           
+                  <p className='font-bold uppercase tracking-wider'> {item.name} <br /> </p> 
+                
+                </div>
+                <div className='relative mt-8 flex flex-col px-2  '>                  
+                  <p className='font-semibold'> Barraca: <span className='text-orange-600'> {item.feirante} </span> </p> 
+                 
+                </div>
+
+                <div className='relative mt-2 flex justify-between px-2 py-4 '>                  
+                  <p className='font-semibold '> 
+                    Preço Médio:                  
                   </p> 
                   <p> 
-                    <span 
-                      className='bg-orange-500 text-white p-1 rounded-full'> 
-                      {item.price} 
-                    </span> 
+                  
+                    <span className='bg-orange-500 text-white p-1 rounded-full'> {item.price} </span> 
                   </p> 
 
                 </div>
+
               </div>
 
               <div className='flex justify-start px-2 py-4'>

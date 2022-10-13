@@ -9,7 +9,7 @@
 `npm install`
 
 - Não esqueça do banco de dados:
-Estamos usando o mariadb e phpmyadmin
+Estamos usando o SQlite
 
 - Execute o project 
 `npm start`
@@ -17,25 +17,26 @@ Estamos usando o mariadb e phpmyadmin
 - Repita os passos pra rodar o server-node
 
 ## branch Front-end client-react
-- [x] login - API 
-- [x] cadastro de user - API
+
 
 
 ## branch Back-end server-node 
-### CRUD Produto
-- [x] Create 
-- [x] Read 
-- [x] Update
-- [x] Delete
+- [x] login
+- [x] cadastro de user
 
 ### CRUD Usuário
 - [x] Create 
-- [ ] Read 
+- [x] Read 
 - [] Update
 - [] Delete
 
 ### Framework
 https://todomvc.com
+https://tailwindcss.com/
 
-### Referenciais vídeos
-https://www.youtube.com/watch?v=_S2GKnFpdtE
+1. autetificação
+O Passport é um middleware para Node.js que facilita a implementação de autenticação e autorização.
+https://www.passportjs.org/
+
+### DB 
+https://www.sqlite.org/index.html

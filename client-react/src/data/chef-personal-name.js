@@ -25,7 +25,7 @@ export const chefPersonalName = [
       name: 'Leo Paixão',
       bairro:'cidade nova',
       image:
-        'hhttps://www.emporiotambo.com.br/pub/media/wysiwyg/blog/chefes-de-cozinha-famosos/xALeo_Paix_o.jpeg.pagespeed.ic.XGXeTXwTUV.webp',
+        'https://www.emporiotambo.com.br/pub/media/wysiwyg/blog/chefes-de-cozinha-famosos/xALeo_Paix_o.jpeg.pagespeed.ic.XGXeTXwTUV.webp',
     },
     {
       id: 5,

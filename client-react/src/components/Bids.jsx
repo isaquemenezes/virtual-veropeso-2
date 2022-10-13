@@ -4,7 +4,7 @@ import { bids } from '../data/bids.js';
 const Bids = () => {
   
   return (
-
+    <section className='mb-40'>
     <div className='max-w-[1540px] m-auto px-4 py-12'>
 
       <h1 className='text-orange-600 font-bold text-4xl text-center'>
@@ -27,6 +27,7 @@ const Bids = () => {
       </div>
 
     </div>
+    </section>
 
   );
 };

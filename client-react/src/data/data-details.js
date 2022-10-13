@@ -1,3 +1,4 @@
+
 export const dataDetails = [
   {
     id: 1,
@@ -5,8 +6,8 @@ export const dataDetails = [
     feirante: 'Dona Joana',
     category: 'carne',
     image:'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-13-pato-no-tucupi.jpg',
-    price: '25,00*',
-    ingredientes:'1 lata de creme de leite 1 lata de milho verde 1 copo de requeijão cremoso 100 g de azeitona sem caroço 2 peitos de frango desfiados 200 g de mussarela fatiada 100 g de batata palha 1 xícara de água 1 pitada de sal',
+    price: '25,55*',
+    ingredientes:'•1 lata de creme de leite •1 lata de milho verde •1 copo de requeijão cremoso 100 g de azeitona sem caroço •2 peitos de frango desfiados 200 g de mussarela fatiada •100 g de batata palha •1 xícara de água •1 pitada de sal',
     modoprepara: 'Bata no liquidificador o milho, o requeijão, o creme de leite e a água. Refogue o creme do liquidificador com o frango desfiado, as azeitonas e o sal até ficar com uma textura espessa. Coloque o refogado numa assadeira, cubra com mussarela e espalhe a batata palha por cima. Leve ao forno até borbulhar. Sirva com arroz branco.'
 
   },
@@ -18,7 +19,7 @@ export const dataDetails = [
     image:
         'https://www.essemundoenosso.com.br/wp-content/uploads/2017/10/culinaria-paraense-2-tacaca.jpg',
     price: '28,00*',
-    ingredientes:'1 lata de creme de leite 1 lata de milho verde 1 copo de requeijão cremoso 100 g de azeitona sem caroço 2 peitos de frango desfiados 200 g de mussarela fatiada 100 g de batata palha 1 xícara de água 1 pitada de sal',
+    ingredientes: '•1 lata de creme de leite •1 lata de milho verde •1 copo de requeijão cremoso 100 g de azeitona sem caroço •2 peitos de frango desfiados 200 g de mussarela fatiada •100 g de batata palha •1 xícara de água •1 pitada de sal',
     modoprepara: 'Bata no liquidificador o milho, o requeijão, o creme de leite e a água. Refogue o creme do liquidificador com o frango desfiado, as azeitonas e o sal até ficar com uma textura espessa. Coloque o refogado numa assadeira, cubra com mussarela e espalhe a batata palha por cima. Leve ao forno até borbulhar. Sirva com arroz branco.'
 
   },

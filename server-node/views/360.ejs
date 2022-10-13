@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ver O Peso Virtual • Entrar</title>
+		<link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="/css/app360.css">
+		
+	</head>
+	<body>
+      
+
+		<h1>Camera Position</h1>
+                X=<input type="text" id="x"></intpu>
+                Y=<input type="text" id="y"></intpu>
+                Z=<input type="text" id="z"></intpu>
+                <input type="submit" onclick="changeXY()"></intpu><br>
+                <div style="float:left;">X=</div><div id="sliderX" style="width:300px; float:left;"></div>
+                <div style="float:left;">Y=</div><div id="sliderY" style="width:300px; float:left;"></div>
+                <div style="float:left;">Z=</div><div id="sliderZ" style="width:300px; float:left;"></div>
+                <br>
+                <script type="text/javascript">
+                const scene = new THREE.Scene();
+                const renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth ,  window.innerHeight); // full screen
+                document.body.appendChild(renderer.domElement);
+                const camera = new THREE.PerspectiveCamera(75 ,window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 600;
+                const geometry = new THREE.SphereGeometry(200, 32, 32);
+                const material = new THREE.MeshStandardMaterial({
+                    color     : new THREE.Color( 0.913, 0.921, 0.925 ),
+                    roughness : 0,
+                    metalness : 0.3 
+                });
+
+                const light = new THREE.PointLight(0xffffff);
+                light.position.x = 250;
+                light.position.y = 25;
+                light.position.z = 500;
+                scene.add(light);
+
+                const mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+
+                renderer.render(scene, camera);
+
+                $("#x").val(camera.position.x);
+                $("#y").val(camera.position.y);        
+                $("#z").val(camera.position.z);
+
+                function changeXY() {
+                    camera.position.x = $("#x").val();        
+                    camera.position.y = $("#y").val();        
+                    camera.position.z = $("#z").val();        
+                    renderer.render(scene, camera);
+                }
+                $(function() {
+                    $('#sliderX').slider({
+                        min   : 0,
+                        max   : 500,
+                        step  : 2,
+                        value : camera.position.x,
+                        slide : function(e, ui) {
+                            camera.position.x = ui.value;
+                            renderer.render(scene, camera);
+                            $("#x").val(ui.value)
+                        }
+                    });
+                    $('#sliderY').slider({
+                        min   : 0,
+                        max   : 500,
+                        step  : 2,
+                        value : camera.position.y,
+                        slide : function(e, ui) {
+                            camera.position.y = ui.value;
+                            renderer.render(scene, camera);
+                            $("#y").val(ui.value)
+                        }
+                    });
+                    $('#sliderZ').slider({
+                        min   : 400,
+                        max   : 1000,
+                        step  : 2,
+                        value : camera.position.z,
+                        slide : function(e, ui) {
+                            camera.position.z = ui.value;
+                            renderer.render(scene, camera);
+                            $("#z").val(ui.value)
+                        }
+                    });
+                });
+                </script>
+	
+    </body>
+</html>

@@ -14,7 +14,7 @@ const BidsChef = () => {
       <p className='text-black-600 font-bold text-2xl text-center'> Especialistas Neste Prato </p>
 
       
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-6 py-6'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-6 py-6 '>
 
         {
           chefPersonal.map((item, index) => (
