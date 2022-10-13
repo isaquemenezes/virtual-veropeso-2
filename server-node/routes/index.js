@@ -87,6 +87,13 @@ router.get('/tour360/panorama_veropeso', (req, res) => {
   res.render('./tour360/panorama_veropeso')
 });
 
+router.get('/tour360/panorama_city', (req, res) => {
+  res.render('./tour360/panorama_city')
+});
+
+router.get('/tour360/panorama_lakehouse', (req, res) => {
+  res.render('./tour360/panorama_lakehouse')
+});
 
 
 module.exports = router;
