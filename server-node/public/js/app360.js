@@ -1,5 +1,4 @@
-// const pan = document.querySelector('.panolens');
-const pan = document.querySelector('.home');
+const pan = document.querySelector('.panolens');
 const images = './images/veropeso3d.jpg';
 
 const panorama = new PANOLENS.ImagePanorama( images );

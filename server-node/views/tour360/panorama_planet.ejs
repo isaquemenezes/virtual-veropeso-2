@@ -40,11 +40,22 @@
 
 
 	<!--link to js--->
-	<!-- <script type="text/javascript" src="./js/script.js"></script> -->
+	
     <script type="text/javascript" src="/js/three.js"></script>
 	<script type="text/javascript" src="/js/panolens.js"></script>
-	<script type="text/javascript" src="/js/app360.js"></script>
+	
     <script type="text/javascript" src="/js/application-menu-mobile.js"></script>
+    <script type="text/javascript">
+        const pan = document.querySelector('.panolens');
+        const images = '/images/planet.png';
+
+        const panorama = new PANOLENS.ImagePanorama( images );
+        const viewer = new PANOLENS.Viewer({ 
+            container:pan 
+        });
+        viewer.add( panorama );
+    </script>
+    
 
 </body>
 </html>

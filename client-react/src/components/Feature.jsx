@@ -68,9 +68,10 @@ const FeatureCards = () => {
           <p className='px-2'>
             Conheça um pouco da cultura paraense sem sair de casa
           </p>
+          <a href="http://127.0.0.1:5000/start">
           <button className='border-white bg-white text-black mx-2 absolute bottom-4'>
             Explorar +
-          </button>
+          </button></a>
         </div>
 
         <img
