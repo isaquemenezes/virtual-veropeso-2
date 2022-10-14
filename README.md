@@ -40,3 +40,9 @@ https://www.passportjs.org/
 
 ### DB 
 https://www.sqlite.org/index.html
+
+### Panolens
+https://pchen66.github.io/panolens.js/
+
+### Three 
+https://threejs.org/

@@ -60,7 +60,7 @@ const NavbarUser = () => {
                 <a href="http://127.0.0.1:5000/login" className='text-xl py-4 flex cursor-pointer'>Entrar</a>
                 <a href="http://127.0.0.1:5000/signup" className='text-xl py-4 flex cursor-pointer'>Registre-se</a>
                 
-                <a href="http://127.0.0.1:5000/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a>
+                <a href="http://127.0.0.1:5000/user/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a>
                 
             </ul>
         </nav>

@@ -64,7 +64,7 @@ const Navbar = () => {
            
               <Link to="/" className='text-xl py-4 flex cursor-pointer'>Home</Link>
               <Link to="/sobre-chef-pessoal" className='text-xl py-4 flex cursor-pointer'>Sobre Chief Pessoal</Link>
-              <a href="http://127.0.0.1:5000/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a> 
+              <a href="http://127.0.0.1:5000/user/dashboard" className='text-xl py-4 flex cursor-pointer'>Dashboard</a> 
                 
             </ul>
         </nav>

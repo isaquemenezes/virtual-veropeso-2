@@ -45,9 +45,9 @@ var router = express.Router();
 //   });
 // });
 
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
+router.get('/user/dashboard', ensureAuthenticated, (req, res) =>
   // console.log(req.user)
-  res.render('dashboard', {
+  res.render('./user/dashboard', {
     user: req.user
   })
 );
@@ -61,10 +61,6 @@ router.get('/chef-personal', ensureAuthenticated, (req, res) =>
 // Tour 360
 router.get('/start', (req, res) =>
   res.render('start')
-);
-
-router.get('/tour', (req, res) =>
-  res.render('tour')
 );
 
 router.get('/tour360/panorama_chine', (req, res) =>
