@@ -1,5 +1,4 @@
 # Main - virtual-veropeso-2
-## Integração React Node
 
 ## Como executar este project 
 - Abra o diretório do cliente react js 
