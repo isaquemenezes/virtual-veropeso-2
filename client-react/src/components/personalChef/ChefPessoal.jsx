@@ -68,8 +68,6 @@ const AboutChefPessoal = () => {
         
       </div>
 
-      <p>Como Funciona ?</p>
-      <p>Vejo os Melhores Chef de Cada Prato </p>
 
     </div>
     );

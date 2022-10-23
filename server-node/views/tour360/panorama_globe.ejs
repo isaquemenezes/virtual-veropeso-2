@@ -6,13 +6,58 @@
 	<title>Complete Travel Website Html Css</title>
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
     
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
+	<style>
+        .modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    }
+    
+    .modal-content {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem 1.5rem;
+        width: 24rem;
+        border-radius: 0.5rem;
+    }
+    
+    .close-button {
+        float: right;
+        width: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        background-color: lightgray;
+    }
+    
+    .close-button:hover {
+        background-color: darkgray;
+    }
+    
+    .show-modal {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1.0);
+        transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+    </style>
 	
 </head>
 <body>
@@ -29,33 +74,111 @@
 		</ul>
 	</header>
 
-	<!--Section Panolens--->
-	<section>
+	<!--Home section--->
+	<section class="home">
+		<div class="home-text">
 
-        <div class="panolens">
+			<h1>Dona Deuza <br> Tacaca</h1>
+			<img class="trigger" src="/images/icons/icons8-map-64.png" alt="icons point ">
+						
+		</div>
+		
+		<div class="home-text">
+
+			<h1>Seu Joao <br> Maniçoba</h1>
+			<img class="trigger2" src="/images/icons/icons8-map-64.png" alt="icons point ">
+						
+		</div>
+	</section>
+	
+	
+
+
+	<!-- modal 1 -->
+	<section>
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close-button">&times;</span>
+
+			<img class="images" src="/images/th.jpeg" alt="">
+			<h3>ingredientes: </h3>
+			<p></p>1 ovo <br>
+			50 gramas de mandioca cozida e amassadabr	<br>
+			15 gramas de farinha de linhaça <br>
+			30 gramas de queijo picadinho (o queijo de sua preferência) <br>
+			Uma pitada de fermento químico</p>
+			<h3>modo de preparo: </h3>
+			<p>
+				1. Em um recipiente, adicione o ovo, a mandioca, a farinha e misture até ficar homogêneo. <br>
+				2. Acrescente o fermento e misture até incorporar. <br>
+				3. Transfira para forminhas de cupcakes untadas e recheie cada com os pedacinhos de queijo (afunde eles na massa). <br>
+				4. Leve ao forno preaquecido a 180°C por cerca de 30 minutos. <br>
+				5. Agora é só servir. Bom apetite. <br>
+			</p>
 			
 		</div>
+	</div>
+	</section>
+
+	
+
+
+	<!--Section Panolens--->
+	<section>
+        <div class="panolens">			
+		</div>
+	</section>
+
+	<section>
+		<a target="_blank" href="https://icons8.com/icon/6xtFIlVzos9p/map">Map</a> icon by 
+		<a target="_blank" href="https://icons8.com">Icons8</a>
 	</section>
 
 
 
-	<!--link to js--->
-	
+	<!--link to js--->	
     <script type="text/javascript" src="/js/three.js"></script>
-	<script type="text/javascript" src="/js/panolens.js"></script>
-	
+	<script type="text/javascript" src="/js/panolens.js"></script>	
     <script type="text/javascript" src="/js/application-menu-mobile.js"></script>
+	
     <script type="text/javascript">
+
         const pan = document.querySelector('.panolens');
-        const images = '/images/panorama_globe.png';
+        const images = '/images/360Single13312X6656.jpg';
 
         const panorama = new PANOLENS.ImagePanorama( images );
         const viewer = new PANOLENS.Viewer({ 
             container:pan 
         });
         viewer.add( panorama );
+
     </script>
-    
+
+	<!-- modal script js  -->
+	<script>
+		const modal = document.querySelector(".modal");
+		const trigger = document.querySelector(".trigger");
+		const trigger2= document.querySelector(".trigger2");
+		const closeButton = document.querySelector(".close-button");
+
+		function toggleModal() {
+			modal.classList.toggle("show-modal");
+		}
+
+		function windowOnClick(event) {
+			if (event.target === modal) {
+				toggleModal();
+			}
+		}
+
+		trigger.addEventListener("click", toggleModal);
+		trigger2.addEventListener("click", toggleModal);
+		closeButton.addEventListener("click", toggleModal);
+		window.addEventListener("click", windowOnClick);
+	</script>
+
+	
+	
 
 </body>
 </html>

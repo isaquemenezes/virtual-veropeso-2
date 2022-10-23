@@ -66,7 +66,7 @@ const howItWorks = () => {
             </div>        
       </div>
    
-      <p>Vejo os Melhores Chef de Cada Prato </p>
+      
 
     </div>
       

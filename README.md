@@ -4,19 +4,21 @@
 - Abra o diretório do cliente react js 
 `cd client-react`
 
+<img src='' />
+
 - Execute o package json para baixar as dependenciais
 `npm install`
 
 - Não esqueça do banco de dados:
-Estamos usando o SQlite
+- Estamos usando o SQlite
 
 - Execute o project 
 `npm start`
 
-- Repita os passos pra rodar o server-node
+- Repita os passos pra rodar o server-node e virtual3D
+<img src='image-preview/nodejs.jpeg' />
 
 ## branch Front-end client-react
-
 
 
 ## branch Back-end server-node 
@@ -31,17 +33,20 @@ Estamos usando o SQlite
 
 ### Framework
 https://todomvc.com
+<img src='' />
 https://tailwindcss.com/
-
+<img src='' />
 1. autetificação
 O Passport é um middleware para Node.js que facilita a implementação de autenticação e autorização.
 https://www.passportjs.org/
-
+<img src='' />
 ### DB 
 https://www.sqlite.org/index.html
-
+<img src='' />
 ### Panolens
 https://pchen66.github.io/panolens.js/
-
+<img src='' />
 ### Three 
 https://threejs.org/
+
+<img src='' />
