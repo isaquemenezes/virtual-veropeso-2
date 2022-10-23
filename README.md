@@ -4,7 +4,7 @@
 - Abra o diretório do cliente react js 
 `cd client-react`
 
-<img src='' />
+<img src='image-preview/' />
 
 - Execute o package json para baixar as dependenciais
 `npm install`
@@ -33,20 +33,29 @@
 
 ### Framework
 https://todomvc.com
-<img src='' />
+<img src='image-preview/todomvc.jpeg' />
+
 https://tailwindcss.com/
-<img src='' />
+<img src='image-preview/tailwindcss.jpeg' />
+
 1. autetificação
 O Passport é um middleware para Node.js que facilita a implementação de autenticação e autorização.
 https://www.passportjs.org/
-<img src='' />
+<img src='image-preview/passport.png' />
+
 ### DB 
 https://www.sqlite.org/index.html
-<img src='' />
+
 ### Panolens
 https://pchen66.github.io/panolens.js/
-<img src='' />
+<img src='image-preview/panolens.jpeg' />
+
 ### Three 
 https://threejs.org/
+<img src='image-preview/threejs.png' />
 
-<img src='' />
+### Telas 
+<img src='image-preview/home.png' />
+<img src='image-preview/perfil_chef_pessoal.png' />
+<img src='image-preview/receita_pratos.png' />
+
