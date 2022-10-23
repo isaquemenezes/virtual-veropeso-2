@@ -3,8 +3,8 @@
 ## Como executar este project 
 - Abra o diretório do cliente react js 
 `cd client-react`
-
-<img src='image-preview/' />
+<a href='https://reactjs.org/' target='_blank'>
+<img src='image-preview/reactjs.jpeg' /></a>
 
 - Execute o package json para baixar as dependenciais
 `npm install`
@@ -16,7 +16,8 @@
 `npm start`
 
 - Repita os passos pra rodar o server-node e virtual3D
-<img src='image-preview/nodejs.jpeg' />
+<a href='https://nodejs.org/' target='_blank'>
+<img src='image-preview/nodejs.jpeg' /></a>
 
 ## branch Front-end client-react
 
@@ -32,26 +33,30 @@
 - [] Delete
 
 ### Framework
-https://todomvc.com
-<img src='image-preview/todomvc.jpeg' />
 
-https://tailwindcss.com/
-<img src='image-preview/tailwindcss.jpeg' />
+<a href='https://todomvc.com/' target='_blank'>
+<img src='image-preview/todomvc.jpeg' /></a>
+
+
+<a href='https://tailwindcss.com/' target='_blank'>
+<img src='image-preview/tailwindcss.jpeg' /></a>
 
 1. autetificação
 O Passport é um middleware para Node.js que facilita a implementação de autenticação e autorização.
-https://www.passportjs.org/
-<img src='image-preview/passport.png' />
+
+<a href='https://www.passportjs.org/' target='_blank'>
+<img src='image-preview/passport.png' /></a>
 
 ### DB 
 https://www.sqlite.org/index.html
 
 ### Panolens
-https://pchen66.github.io/panolens.js/
-<img src='image-preview/panolens.jpeg' />
+
+<a href='https://pchen66.github.io/panolens.js/' target='_blank'>
+<img src='image-preview/panolens.jpeg' /></a>
 
 ### Three 
-<a href='https://threejs.org/'>
+<a href='https://threejs.org/' target='_blank'>
 <img src='image-preview/threejs.png' /></a>
 
 ### Telas 
