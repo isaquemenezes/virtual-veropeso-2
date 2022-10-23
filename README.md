@@ -51,10 +51,11 @@ https://pchen66.github.io/panolens.js/
 <img src='image-preview/panolens.jpeg' />
 
 ### Three 
-https://threejs.org/
-<img src='image-preview/threejs.png' />
+<a href='https://threejs.org/'>
+<img src='image-preview/threejs.png' /></a>
 
 ### Telas 
+
 <img src='image-preview/home.png' />
 <img src='image-preview/perfil_chef_pessoal.png' />
 <img src='image-preview/receita_pratos.png' />
